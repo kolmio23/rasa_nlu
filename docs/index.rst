@@ -60,10 +60,6 @@ Rasa NLU and Rasa Core together form the `Rasa Stack <https://rasa.com/products/
    :image_url: _static/images/interactive_learning.png
 
 
-.. button::
-   :text: Button Text
-   :link: link/to/stuff.html
-
 
 
 .. toctree::
