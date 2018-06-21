@@ -17,6 +17,7 @@ jobs:
     script:
     - eval "$(ssh-agent -s)"; touch platform_docs_key; chmod 0600 platform_docs_key
     - openssl aes-256-cbc -K $encrypted_bd37f77887e8_key -iv $encrypted_bd37f77887e8_iv -in id_rsa.enc -out id_rsa -d
+    - chmod 0600 id_rsa
     - ssh-add id_rsa
     - git config --global user.email "builds@travis-ci.com"
     - git config --global user.name "Travis CI"
