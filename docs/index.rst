@@ -14,7 +14,7 @@ Rasa NLU and Rasa Core together form the `Rasa Stack <https://rasa.com/products/
 .. card::
    :title: Turn Natural Language Into Structured Data
    :subtitle: NLU Quickstart
-   :link: quickstart
+   :link: /nlu/quickstart/
    :description: turn messages into intents and entities and live the dream
    :image_url: http://core.rasa.com/_images/mood_bot.png
 
@@ -22,7 +22,7 @@ Rasa NLU and Rasa Core together form the `Rasa Stack <https://rasa.com/products/
 .. card::
    :title: Match Messages to Multiple Intents
    :subtitle: multi-intents
-   :link: quickstart
+   :link: /nlu/choosing_pipeline/
    :description: 
    :image_url: _static/images/multi_intent.png
 
@@ -30,7 +30,7 @@ Rasa NLU and Rasa Core together form the `Rasa Stack <https://rasa.com/products/
 .. card::
    :title: Custom Word Vectors
    :subtitle: choosing a pipeline
-   :link: quickstart
+   :link: /nlu/choosing_pipeline/
    :description: Train custom word embeddings for your bot or assistant,
        or use pre-trained ones.
    :image_url: _static/images/word_vectors.png
@@ -39,7 +39,7 @@ Rasa NLU and Rasa Core together form the `Rasa Stack <https://rasa.com/products/
 .. card::
    :title: Extract Custom and Built-in Entities
    :subtitle: entity extractors
-   :link: quickstart
+   :link: /nlu/entities/
    :description: extract entities specific to your domain
    :image_url: _static/images/custom_entities.png
 
@@ -47,7 +47,7 @@ Rasa NLU and Rasa Core together form the `Rasa Stack <https://rasa.com/products/
 .. card::
    :title: Learn To Handle Context from Real Conversations
    :subtitle: core quickstart
-   :link: quickstart
+   :link: /core/quickstart/
    :description: throw away your unmaintainable state machine and use machine learning instead
    :image_url: _static/images/state_machine.png
 
@@ -55,7 +55,7 @@ Rasa NLU and Rasa Core together form the `Rasa Stack <https://rasa.com/products/
 .. card::
    :title: Interactively teach your agent new skills
    :subtitle: interactive learning
-   :link: quickstart
+   :link: /core/interactive_learning/
    :description: provide feedback to correct errors and teach new skills
    :image_url: _static/images/interactive_learning.png
 
