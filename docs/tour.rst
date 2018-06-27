@@ -4,11 +4,6 @@ What You Can Do with Rasa
 
 Rasa NLU and Rasa Core together form the `Rasa Stack <https://rasa.com/products/rasa-stack>`_.
 
-.. image:: /_static/images/rasa_stack_explained.png
-   :height: 400px
-   :scale: 100 %
-   :alt: rasa stack
-   :align: center
 
 
 .. card::
