@@ -11,7 +11,7 @@ jobs:
     if: fork = false
     install:
     - sudo apt-get update
-    - pip install sphinx==1.7.5 sphinxcontrib-versioning==2.2.1 sphinx-autobuild==0.6.0 sphinxcontrib-httpdomain==1.5.0  sphinxcontrib-programoutput==0.11
+    - pip install sphinx==1.7.5 sphinx-autobuild==0.6.0 sphinxcontrib-httpdomain==1.5.0  sphinxcontrib-programoutput==0.11
     - pip install git+https://${GITHUB_TOKEN}:x-oauth-basic@github.com/RasaHQ/rasabaster.git#egg=rasabaster
     - pip list
     script:
@@ -23,4 +23,13 @@ jobs:
     - git config --global user.name "Travis CI"
     - git remote set-url --push origin "git@github.com:$TRAVIS_REPO_SLUG"
     - export ${!TRAVIS*}
-    - sphinx-versioning push -r master docs newdocs . -- -b dirhtml
+    - cd docs
+    - make dirhtml
+    - cd ../
+    - git clone -b newdocs "https://$GITHUB_TOKEN@github.com/$TRAVIS_REPO_SLUG.git" newdocs
+    - cd newdocs
+    - cp -R ../docs/_build/html/* ./
+    - git add -A .
+    - git commit -m "[ci skip] Autodoc commit for $COMMIT."
+    - git push -q origin newdocs
+
