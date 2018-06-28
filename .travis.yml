@@ -28,7 +28,7 @@ jobs:
     - cd ../
     - git clone -b newdocs "https://$GITHUB_TOKEN@github.com/$TRAVIS_REPO_SLUG.git" newdocs
     - cd newdocs
-    - cp -R ../docs/_build/html/* ./
+    - cp -R ../docs/_build/dirhtml/* ./
     - git add -A .
     - git commit -m "[ci skip] Autodoc commit for $COMMIT."
     - git push -q origin newdocs
