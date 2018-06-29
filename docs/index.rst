@@ -12,10 +12,10 @@ Welcome to the Rasa Documentation
    :description2: Machine learning-based dialogue management
    :title3: Rasa Platform
    :link3: /platform
-   :description3: Turn natural language into structured data
+   :description3: Accelerate your team's product development
    :title4: Rasa GitHub
    :link4: https://github.com/RasaHQ
-   :description4: Turn natural language into structured data
+   :description4: Find us on GitHub
 
 
 .. toctree::
