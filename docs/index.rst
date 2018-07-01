@@ -24,4 +24,4 @@ Welcome to the Rasa Documentation
 
    stack
    tour
-   community
+   contributing
