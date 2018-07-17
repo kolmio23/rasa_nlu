@@ -55,7 +55,7 @@ will also run all the tests.
 Python Conventions
 ^^^^^^^^^^^^^^^^^^
 
-To ensure consistent style, all python code has to follow the pep-8 specification.
+To ensure consistent style, all Python code has to follow the pep-8 specification.
 This is quite strict, so it's worth installing a linter for your editor or IDE which
 does this automatically for you. 
 
@@ -63,8 +63,8 @@ does this automatically for you.
 Python 2 and 3 Cross Compatibility
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Rasa runs in both python 2 and python 3, although python 2 support is being phased out 
-by most major python projects, and Rasa will also drop python 2 support eventually.
+Rasa runs in both Python 2 and Python 3, although Python 2 support is being phased out 
+by most major Python projects, and Rasa will also drop Python 2 support eventually.
 
 To ensure cross compatibility between Python 2 and 3 we prioritize Python 3 conventions.
 Keep in mind that:
@@ -73,6 +73,6 @@ Keep in mind that:
 - division generates floating point numbers. Use ``//`` for truncated division
 - some built-ins, e.g. ``map`` and ``filter`` return iterators in Python 3. If you want to make use of them import the Python 3 version of them from ``builtins``. Otherwise use list comprehensions, which work uniformly across versions
 - use ``io.open`` instead of the builtin ``open`` when working with files
-- The following imports from ``__future__`` are mandatory in every python file: ``unicode_literals``, ``print_function``, ``division``, and ``absolute_import``
+- The following imports from ``__future__`` are mandatory in every Python file: ``unicode_literals``, ``print_function``, ``division``, and ``absolute_import``
 
 Please refer to this `cheat sheet <http://python-future.org/compatible_idioms.html#>`_ to learn how to write different constructs compatible with Python 2 and 3.
