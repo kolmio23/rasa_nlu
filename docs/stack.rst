@@ -1,6 +1,6 @@
 
-Rasa NLU and Rasa Core
-======================
+The Rasa Stack
+==============
 
 Rasa NLU and Rasa Core together form the `Rasa Stack <https://rasa.com/products/rasa-stack>`_. You can use them independently, or together. 
 
