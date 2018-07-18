@@ -5,13 +5,13 @@ Welcome to the Rasa Documentation
 
 .. smallcards::
    :title1: Rasa NLU
-   :link1: /nlu
+   :link1: /docs/nlu
    :description1: Turn natural language into structured data
    :title2: Rasa Core
-   :link2: /core
+   :link2: /docs/core
    :description2: Machine learning-based dialogue management
    :title3: Rasa Platform
-   :link3: /platform
+   :link3: /docs/platform
    :description3: Accelerate your team's product development
    :title4: Rasa GitHub
    :link4: https://github.com/RasaHQ
