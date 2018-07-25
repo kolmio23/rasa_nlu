@@ -4,7 +4,7 @@ Contributing
 ============
 
 
-There is a big community of `Rasa contributors <https://rasa.com/community/join/>`_. 
+There is a big community of `Rasa contributors <https://rasa.com/community/contribute/>`_. 
 This page is mostly about how to contribute code to the Rasa NLU and Rasa Core libraries, but 
 there are many other ways you can contribute! Read about them `here <https://rasa.com/community/contribute/>`_.
 
