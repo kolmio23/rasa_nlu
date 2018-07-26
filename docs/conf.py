@@ -36,7 +36,8 @@ extensions = [
     'sphinxcontrib.programoutput',
     'rasabaster.button',
     'rasabaster.card',
-    'rasabaster.smallcards'
+    'rasabaster.smallcards',
+    'rasabaster.tinycards'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
