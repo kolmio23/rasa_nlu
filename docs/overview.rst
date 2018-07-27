@@ -77,7 +77,7 @@ What you can do with the Rasa Stack
    :link2: ../../core/quickstart/
    :image_url2: ../_static/images/learn_from_conversations.png
    :title3: Custom Word Vectors
-   :subtitle3: choosing a pipeline
+   :subtitle3: Train custom word vectors for your domain
    :link3: ../../nlu/choosing_pipeline/
    :image_url3: ../_static/images/custom_vectors.png
    
