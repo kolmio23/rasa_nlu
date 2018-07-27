@@ -17,12 +17,21 @@ Understanding The Rasa Stack
 
 TL;DR: Rasa NLU's job is to interpret messages, and Rasa Core's job is to decide what should happen next.
 
-.. image:: /_static/images/rasa_stack_explained.png
+.. image:: ../_static/images/rasa_stack_explained.png
    :width: 1382
    :alt: rasa stack
 
+Rasa NLU performs `Natural Language Understanding`, which means taking free-form text like 
 
-Get Started withe Rasa Core and NLU
+.. pull-quote:: `Please send the confirmation to amy@example.com`
+
+and turning it into structured data. 
+Rasa Core performs `Dialog Management`, which means keeping track of a conversation, and deciding
+how to proceed. Both Rasa Core and NLU use Machine Learning to learn from real example conversations.
+
+Rasa NLU and Core are independent. You can use NLU without Core, and vice versa.
+
+Get Started with Rasa Core and NLU
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. smallcards::

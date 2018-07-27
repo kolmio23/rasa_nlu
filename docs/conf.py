@@ -126,7 +126,7 @@ html_theme = "rasabaster"
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'product': 'About',
+    'product': 'Getting Started',
     'description': "Rasa",
     'github_user': 'RasaHQ',
     'github_repo': 'rasa_docs',
