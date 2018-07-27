@@ -3,9 +3,9 @@ Start building great chatbots and assistants with the open source conversational
 =============================================================================================
 
 1. **Understand the Rasa Stack**
-2. Try it out (without installing anything!)
-3. Install on your machine
-4. Join the community and start building
+2. `Try it out <../core/quickstart/>`_ (without installing anything!)
+3. `Install <../core/installation/>`_ Rasa on your machine
+4. `Join the community <https://forum.rasa.com/>`_ and start building
 
 The Rasa Stack is a pair of open source libraries (Rasa NLU and Rasa Core) that allow
 developers to expand chatbots and voice assistants beyond answering simple questions.
@@ -34,13 +34,21 @@ Rasa NLU and Core are independent. You can use NLU without Core, and vice versa.
 Get Started with Rasa Core and NLU
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. smallcards::
-   :title1: Try Core + NLU
-   :link1: /docs/core/quickstart/
-   :description1: I want a full bot framework
-   :title2: Try NLU
-   :link2: /docs/nlu/quickstart/
-   :description2: I just need NLU for now
+
+I want a full bot framework
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. button::
+    :text: Try Core + NLU
+    :link: /docs/core/quickstart/
+
+
+I just need NLU for now
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. button::
+   :text: Try NLU
+   :link: /docs/nlu/quickstart/
 
 
 I want to migrate to Rasa from:
@@ -60,28 +68,28 @@ What you can do with the Rasa Stack
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. tinycards::
-   :title1: NLU Quickstart
-   :subtitle1: Turn Natural Language Into Structured Data
+   :title1: Turn Natural Language Into Structured Data
+   :subtitle1: NLU Quickstart
    :link1: ../../nlu/quickstart/
-   :image_url1: ../_static/images/rasa-stack-extract-entities.png
-   :title2: Match Messages to Multiple Intents
-   :subtitle2: multi-intents
-   :link2: ../../nlu/choosing_pipeline/
-   :image_url2: ../_static/images/multi_intent.png
+   :image_url1: ../_static/images/structured_data.png
+   :title2: ML-based dialogue
+   :subtitle2: Learn to handle context from real conversations
+   :link2: ../../core/quickstart/
+   :image_url2: ../_static/images/learn_from_conversations.png
    :title3: Custom Word Vectors
    :subtitle3: choosing a pipeline
-   :link3: ../..//nlu/choosing_pipeline/
-   :image_url3: ../_static/images/word_vectors.png
+   :link3: ../../nlu/choosing_pipeline/
+   :image_url3: ../_static/images/custom_vectors.png
    
 .. tinycards::
    :title1: Entity Extraction
    :subtitle1: Extract custom and built-in entities
    :link1: ../../nlu/entities/
-   :image_url1: ../_static/images/rasa-stack-extract-entities.png
-   :title2: ML-based dialogue
-   :subtitle2: Learn to handle context from real dialogues
-   :link2: ../../core/quickstart/
-   :image_url2: ../_static/images/state_machine.png
+   :image_url1: ../_static/images/custom_entities.png
+   :title2: Match Messages to Multiple Intents
+   :subtitle2: multi-intents
+   :link2: ../../nlu/choosing_pipeline/
+   :image_url2: ../_static/images/one_to_many.png
    :title3: Interactive Learning
    :subtitle3: Teach your bot new skills by talking to it.
    :link3: ../../core/interactive_learning/

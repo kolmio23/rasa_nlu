@@ -4,16 +4,30 @@ How can I get training data for my chatbot? + more FAQs
 Getting Training Data for Chatbots and Assistants
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Getting a good training data set is crucial for building a chatbot or assistant. 
+We have a couple of datasets to help you get started on the `Community Forum <https://forum.rasa.com/>`_.
+
+It's also a very good idea to `pretend to be the bot yourself <https://conversations.golastmile.com/put-on-your-robot-costume-and-be-the-minimum-viable-bot-yourself-3e48a5a59308#.d4tmdan68>`_. 
+
+But the most important factor is always real user feedback. At Rasa we strongly believe
+that **real conversations are more important than hypothetical ones**.
+The best data of all is the result of real humans interacting with your AI.
 
 
 Is there a GUI for labeling data?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You are spoiled for choice! `Rasa Platform <https://rasa.com/products/rasa-platform>`_ comes with a graphical interface
-for creating both Rasa NLU and Rasa Core data. 
-`rasa-trainer-ui <https://github.com/RasaHQ/rasa-nlu-trainer>`_ is an open source tool for annotating NLU data. 
-`Rasa UI <https://github.com/paschmann/rasa-ui>`_ is a web application which uses Rasa NLU as its backend.
+Open Source
+***********
 
+- `rasa-trainer-ui <https://github.com/RasaHQ/rasa-nlu-trainer>`_ is an open source tool for annotating NLU data.
+- `Articulate <https://samtecspg.github.io/articulate/>`_ is an open source platform for building conversational interfaces.
+- `Rasa UI <https://github.com/paschmann/rasa-ui>`_ is a web application which uses Rasa NLU as its backend.
+
+Commercially Supported
+**********************
+`Rasa Platform <https://rasa.com/products/rasa-platform>`_ comes with a graphical interface
+for creating both Rasa NLU and Rasa Core data. 
 
 
 Building Advanced chatbots and assistants
@@ -27,16 +41,20 @@ Rasa has developed a course on `building chatbots in python <https://www.datacam
 What does it mean to build machine-learning based dialogue?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Rule-based dialogue systems do not scale. There has been a lot of research on using machine learning
+In our experience, rule-based dialogue systems do not scale. 
+There has been a lot of research on using machine learning
 to overcome these limitations, `this post <https://medium.com/rasa-blog/a-new-approach-to-conversational-software-2e64a5d05f2a>`_ goes into a lot more depth. 
 
 What are some examples of great bots built with Rasa?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Meekan <https://meekan.com/>`_ is a popular slack bot for scheduling meetings. 
-`Tia <https://asktia.com/>`_ is a women's health company with a chatbot as part of the core experience.
-`Helvetia <https://www.helvetia.com/ch/web/en/about-us/about-helvetia/information/chatbot-service.html>`_ is an
-insurance company that lets you report bike thefts via a Facebook Messenger chatbot. 
+There are hundreds of great bots out there built with Rasa, built by everyone from startups, 
+to NGOs, to the Fortune 500.
+We are working on a directory, so email hi@rasa.com if you'd like to be included!
+
+- `Meekan <https://meekan.com/>`_ is a popular slack bot for scheduling meetings. 
+- `Tia <https://asktia.com/>`_ is a women's health company with a chatbot as part of the core experience.
+- `Helvetia <https://www.helvetia.com/ch/web/en/about-us/about-helvetia/information/chatbot-service.html>`_ is an insurance company that lets you report bike thefts via a Facebook Messenger chatbot. 
 
 
 I need help developing a bot
@@ -66,37 +84,52 @@ Rasa Core models by creating your own `Policy <https://rasa.com/docs/core/api/po
 Deploying Chatbots and Voice apps in Enterprises
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-How can I connect Rasa to backend intregrations?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Is there a way to get enterprise-grade support?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-How can I coordinate work with my team?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Yes. `Rasa Platform <https://rasa.com/products/rasa-platform/>`_ comes with enterprise-grade
+support and a choice of SLAs to suit your requirements.
 
-`Rasa Platform <https://rasa.com/products/rasa-platform/>`_ is our enterprise product
-and adds a number of features for teamwork.
+How can I connect Rasa to my backend enterprise systems?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-How can I coordinate work with my team?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-`Rasa Platform <https://rasa.com/products/rasa-platform/>`_ is our enterprise product.
-Rasa Platform subscriptions come with our Customer Success program which includes enterprise grade support.
+The best way to do this is with `Custom Actions <https://rasa.com/docs/core/customactions/>`_.
 
 How do I deploy Rasa in production?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Rasa Platform <https://rasa.com/products/rasa-platform/>`_ runs on premise or on your private cloud.
-Rasa Platform subscriptions come with our Customer Success program which includes enterprise grade support.
+We recommend docker for production deployments. For the Rasa Stack we provide
+pre-built docker images on docker hub. 
+`Rasa Platform <https://rasa.com/products/rasa-platform/>`_ is also containerized, 
+and runs either on premise or on your private cloud. It ships with production-ready
+container orchestration.
+
+
+How can non-engineers contribute to bot development?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`Rasa Platform <https://rasa.com/products/rasa-platform/>`_ is our enterprise product.
 
 How can I add a Rasa Bot to my website?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are multiple open source projects for adding a Rasa-compatible chat widget to a website.
-`Rasa Webchat <https://github.com/mrbot-ai/rasa-webchat>`_ is under MIT license and `Chatroom <https://github.com/scalableminds/chatroom>`_ is under AGPL 3.
 
-How can I create a custom channel integration for Rasa?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- `Rasa Webchat <https://github.com/mrbot-ai/rasa-webchat>`_ is under MIT license
+- `Chatroom <https://github.com/scalableminds/chatroom>`_ is under AGPL 3
 
-It is straightforward to implement a custom integration. Check out the docs `here <http://rasa.com/docs/core/connectors/#custom-channels>`_
+How can I create a custom integration for Rasa?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+It's straightforward to implement a custom channel (e.g. for company-specific chat software).
+Check out the docs `here <http://rasa.com/docs/core/connectors/#custom-channels>`_.
+
+I've already built a bot with the Rasa Stack. Can I easily upgrade to Rasa Platform?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Yes. Rasa Platform is installed alongside Rasa Core and NLU. Rasa Platform can work with your 
+already existing Rasa NLU and Rasa Core servers.
+
 
 About Rasa the Company
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -110,18 +143,14 @@ How does Rasa make money if everything is open source?
 How do I get access to your roadmap?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+As part of our customer success program, companies have access to our roadmap
+and we work closely with them to prioritize upcoming features and get early feedback.
 
-
-I've already built a bot with the Rasa Stack. Can I easily upgrade to Rasa Platform?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Rasa Platform is installed alongside Rasa Core and NLU. Rasa Platform can work with your 
-already existing Rasa NLU and Rasa Core servers.
 
 How can I get in touch?
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-If you have a question about how to use Rasa, the Rasa Community is the best place to help.
+If you have a question about how to use Rasa, the `Rasa Community <https://forum.rasa.com/>`_ is the best place to help.
 For bug reports and feature requests, please go to `GitHub <https://github.com/RasaHQ>`_.
 For everything else please email hi@rasa.com
 
