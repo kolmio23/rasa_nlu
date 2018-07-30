@@ -40,6 +40,8 @@ extensions = [
     'rasabaster.tinycards'
 ]
 
+
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -131,6 +133,7 @@ html_theme_options = {
     'github_user': 'RasaHQ',
     'github_repo': 'rasa_docs',
     'fixed_sidebar': True,
+    'base_url': 'https://rasa.com/docs/getting-started/'
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
