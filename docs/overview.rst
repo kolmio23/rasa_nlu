@@ -48,7 +48,7 @@ I just need NLU for now
 
 .. button::
    :text: Try NLU
-   :link: /docs/nlu/quickstart/
+   :link: /docs/nlu/master/quickstart/
 
 
 I want to migrate to Rasa from:
@@ -70,7 +70,7 @@ What you can do with the Rasa Stack
 .. tinycards::
    :title1: Turn Natural Language Into Structured Data
    :subtitle1: NLU Quickstart
-   :link1: ../../nlu/quickstart/
+   :link1: ../../nlu/master/quickstart/
    :image_url1: ../_static/images/structured_data.png
    :title2: ML-based dialogue
    :subtitle2: Learn to handle context from real conversations
@@ -78,17 +78,17 @@ What you can do with the Rasa Stack
    :image_url2: ../_static/images/learn_from_conversations.png
    :title3: Custom Word Vectors
    :subtitle3: Train custom word vectors for your domain
-   :link3: ../../nlu/choosing_pipeline/
+   :link3: ../../nlu/master/choosing_pipeline/
    :image_url3: ../_static/images/custom_vectors.png
    
 .. tinycards::
    :title1: Entity Extraction
    :subtitle1: Extract custom and built-in entities
-   :link1: ../../nlu/entities/
+   :link1: ../../nlu/master/entities/
    :image_url1: ../_static/images/custom_entities.png
    :title2: Match Messages to Multiple Intents
    :subtitle2: multi-intents
-   :link2: ../../nlu/choosing_pipeline/
+   :link2: ../../nlu/master/choosing_pipeline/
    :image_url2: ../_static/images/one_to_many.png
    :title3: Interactive Learning
    :subtitle3: Teach your bot new skills by talking to it.
