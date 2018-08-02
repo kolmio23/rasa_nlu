@@ -1,9 +1,20 @@
-Rasa as an alternative to Google Dialogflow
-===========================================
+:desc: Migrating from Google Dialogflow to Rasa
+
+.. _dialogflow:
+
+Rasa: An Open Source alternative to Google Dialogflow
+=====================================================
+
+Welcome to the wonderful world of open source! 
+Congratulations on embracing a free and fully customizable solution. 
+We've got the steps to migrate from LUIS here, or from LUIS :ref:`here <luis>`. 
+
+`Join our community <https://forum.rasa.com/>`_ and be part of something really big! 
 
 You can use Rasa NLU as an open source drop-in replacement for Google Dialogflow.
 
-You can export your app from Dialogflow and load the training data directly into Rasa.
+Migration from Dialogflow to Rasa is quick and easy.
+Simply load the training data into Rasa and you're all set. Here's how:
 
 
 Step 1: Export your data from Dialogflow
@@ -22,16 +33,14 @@ Click on the 'Export and Import' tab and click on the 'Export as ZIP' button.
    :alt: Dialogflow Export 2
 
 
-This will download a file with a ``.zip`` extension. Unzip this file, this will
-create a folder. 
-
+This will download a file with a ``.zip`` extension. Unzip this file to create a folder.
 
 Step 2: Train your Rasa NLU model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Follow the instructions in the `NLU Quickstart <https://rasa.com/docs/nlu/quickstart/>`_, using your downloaded folder as the training data.
 
-If your unzipped folder is called ``testagent``, then the command would be:
+If your unzipped folder is called ``testagent``, the command would be:
 
 .. code-block:: bash
 

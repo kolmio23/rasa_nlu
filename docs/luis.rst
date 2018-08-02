@@ -1,9 +1,21 @@
-Rasa as an alternative to Microsoft LUIS
-========================================
+
+:desc: Migrating from Microsoft LUIS to Rasa
+
+.. _luis:
+
+Rasa: An Open Source ALternative to Microsoft LUIS
+==================================================
+
+Welcome to the wonderful world of open source! 
+Congratulations on embracing a free and fully customizable solution. 
+We've got the steps to migrate from LUIS here, or from Dialogflow :ref:`here <dialogflow>`. 
+
+`Join our community <https://forum.rasa.com/>`_ and be part of something really big! 
 
 You can use Rasa NLU as an open source drop-in replacement for Microsoft LUIS.
 
-You can export your app from LUIS and load the training data directly into Rasa.
+Migrating from LUIS to Rasa is quick and easy. 
+Simply load your training data into Rasa and you are ready to go. Here's how:
 
 Step 1: Export your Training Data from LUIS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -15,7 +27,7 @@ on the three dots menu next to the app you want to export.
    :width: 240
    :alt: LUIS Export
 
-Select 'Export App', this will download a file with a ``.json`` extension.
+Select 'Export App'. This will download a file with a ``.json`` extension that's ready for importing to Rasa.
 
 Step 2: Train your Rasa NLU model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
