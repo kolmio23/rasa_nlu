@@ -41,7 +41,7 @@ If your unzipped folder is called ``testagent``, then the command would be:
 Step 3: Modify your app to call your Rasa NLU Server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Your existing application will have some code to make API requests to LUIS. 
+Your existing application will have some code to make API requests to Dialogflow. 
 Modify the API url to point to your Rasa NLU server. 
 If you are testing this on your development machine, that will be at ``http://localhost:5000``
 When you start the Rasa NLU server, you can also pass an ``emulate`` argument:
