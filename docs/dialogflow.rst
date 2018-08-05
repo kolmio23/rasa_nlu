@@ -14,7 +14,7 @@ We've got the steps to migrate from LUIS here, or from LUIS :ref:`here <luis>`.
 You can use Rasa NLU as an open source drop-in replacement for Google Dialogflow.
 
 Migration from Dialogflow to Rasa is quick and easy.
-Simply load the training data into Rasa and you're all set. Here's how:
+Simply load the training data into Rasa and you're all set. Here's how you do it:
 
 
 Step 1: Export your data from Dialogflow

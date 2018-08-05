@@ -15,7 +15,7 @@ We've got the steps to migrate from LUIS here, or from Dialogflow :ref:`here <di
 You can use Rasa NLU as an open source drop-in replacement for Microsoft LUIS.
 
 Migrating from LUIS to Rasa is quick and easy. 
-Simply load your training data into Rasa and you are ready to go. Here's how:
+Simply load your training data into Rasa and you are ready to go. Here's how you do it:
 
 Step 1: Export your Training Data from LUIS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
