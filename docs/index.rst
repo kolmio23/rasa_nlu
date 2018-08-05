@@ -9,6 +9,7 @@ Index
    Overview <overview>
    contributing
    FAQ <faq>
+   What's New <updates>
 
 .. toctree::
    :maxdepth: 1
