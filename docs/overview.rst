@@ -96,3 +96,14 @@ What you can do with the Rasa Stack
    :image_url3: ../_static/images/interactive_learning.png
    
 
+Rasa Platform: Everything you need to run the Rasa Stack in the Enterprise.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. image:: /_static/images/rasa-platform-diagram.png
+   :width: 800
+   :alt: Rasa Platform
+
+
+.. button::
+   :text: Learn More about Rasa Platform
+   :link: http://rasa.com/products/rasa-platform/
