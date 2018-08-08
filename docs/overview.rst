@@ -103,6 +103,8 @@ Rasa Platform: Everything you need to run the Rasa Stack in the Enterprise.
    :width: 800
    :alt: Rasa Platform
 
+Rasa Platform extends the open source Rasa NLU and Rasa Core libraries with APIs,
+a graphical user interface, and our customer success program which includes enterprise-grade support.
 
 .. button::
    :text: Learn More about Rasa Platform
