@@ -10,6 +10,7 @@ Index
    contributing
    FAQ <faq>
    What's New <updates>
+   Demo Bot <demobot>
 
 .. toctree::
    :maxdepth: 1
@@ -18,5 +19,3 @@ Index
 
    Google Dialogflow <dialogflow>
    Microsoft LUIS <luis>
-
-
