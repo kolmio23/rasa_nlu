@@ -26,17 +26,4 @@ Thanks for testing the bot! If you’d like to give us feedback or raise any
 bugs/issues with it, feel free to do so in the `repo <https://github.com/RasaHQ/rasa-demo>`_.
 
 .. raw:: html
-    <div id="webchat">
-    <script src="https://storage.googleapis.com/mrbot-cdn/webchat-latest.js"></script>
-    <script>
-     WebChat.default.init({
-         selector: "#webchat",
-         initPayload: "/greet",
-         socketUrl: "https://website-demo.rasa.com/",
-         title: "",
-         subtitle: "",
-         profileAvatar: "https://rasa.com/assets/img/demo/rasa_avatar.png",
-         showCloseButton: true,
-         fullScreenMode: false,})
-    </script>
-    </div>
+   :file: webchat.html
