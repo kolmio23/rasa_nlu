@@ -3,6 +3,16 @@
 What's New?
 ===========
 
+August 2018
+~~~~~~~~~~~
+
+- Rasa Core 0.11 is out! This is a major update, which requires a little migration work, but 
+greatly simplifies deploying Rasa Core in production. Custom actions are now run in a separate
+server, which you can create using the new `rasa_core_sdk <https://github.com/RasaHQ/rasa_core_sdk>`_.
+Check out the detailed `changelog <https://github.com/RasaHQ/rasa_core/blob/master/CHANGELOG.rst>`_, `migration instructions <http://rasa.com/docs/core/migrations/>`_, and tutorial.
+- Rasa Core 0.11 also ships with the new ``EmbeddingPolicy``, implemented in tensorflow and described in a paper (link coming soon). 
+
+
 July 2018
 ~~~~~~~~~
 
