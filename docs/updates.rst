@@ -6,11 +6,15 @@ What's New?
 August 2018
 ~~~~~~~~~~~
 
-- Rasa Core 0.11 is out! This is a major update, which requires a little migration work, but 
+Rasa Core 0.11 is out!
+----------------------
+This is a major update, which requires a little migration work, but 
 greatly simplifies deploying Rasa Core in production. Custom actions are now run in a separate
 server, which you can create using the new `rasa_core_sdk <https://github.com/RasaHQ/rasa_core_sdk>`_.
-Check out the detailed `changelog <https://github.com/RasaHQ/rasa_core/blob/master/CHANGELOG.rst>`_, `migration instructions <http://rasa.com/docs/core/migrations/>`_, and tutorial.
+
+- Check out the detailed `changelog <https://github.com/RasaHQ/rasa_core/blob/master/CHANGELOG.rst>`_, `migration instructions <http://rasa.com/docs/core/migrations/>`_, and `livestream <https://forum.rasa.com/t/rasa-core-sdk-live-stream/826>`_.
 - Rasa Core 0.11 also ships with the new ``EmbeddingPolicy``, implemented in tensorflow and described in a paper (link coming soon). 
+- **For Rasa Platform Users**: Rasa Platform 0.16 (coming September 2018) will depend on Rasa Core 0.11. Please ensure that you migrate before updating your installation. This update is necessary to enable new platform features, and to make deployment and maintenance simpler. If you have any questions about migrating to Rasa Core 0.11, please use your dedicated support email to reach out. 
 
 
 July 2018
