@@ -127,3 +127,7 @@ and finally for Dialogflow
         },
         "timestamp": "2016-11-29T12:33:15.369411"
     }
+
+.. raw:: html
+   :file: livechat.html
+   
