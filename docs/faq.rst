@@ -155,3 +155,5 @@ For bug reports and feature requests, please go to `GitHub <https://github.com/R
 For everything else please email hi@rasa.com
 
 
+.. raw:: html
+   :file: livechat.html

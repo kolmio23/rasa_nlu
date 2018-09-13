@@ -76,3 +76,6 @@ Keep in mind that:
 - The following imports from ``__future__`` are mandatory in every Python file: ``unicode_literals``, ``print_function``, ``division``, and ``absolute_import``
 
 Please refer to this `cheat sheet <http://python-future.org/compatible_idioms.html#>`_ to learn how to write different constructs compatible with Python 2 and 3.
+
+.. raw:: html
+   :file: livechat.html

@@ -72,3 +72,5 @@ In Dialogflow, there is a concept called ``Fulfillment``. In Rasa we call this a
 Dialogflow also has a Small Talk module. One of our awesome contributors has made a Rasa compatible version of this `here <https://github.com/rahul051296/small-talk-rasa-stack>`_.
 
 
+.. raw:: html
+   :file: livechat.html
