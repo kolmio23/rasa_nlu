@@ -51,3 +51,5 @@ Released Rasa NLU 0.13
 - support multuple training processes per project
 
 
+.. raw:: html
+   :file: livechat.html
