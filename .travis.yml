@@ -12,7 +12,7 @@ jobs:
     install:
     - sudo apt-get update
     - pip install sphinx==1.7.5 sphinx-autobuild==0.6.0 sphinxcontrib-httpdomain==1.5.0  sphinxcontrib-programoutput==0.11
-    - pip install --no-cache-dir https://storage.googleapis.com/docs-theme/rasabaster-0.7.15.tar.gz
+    - pip install --no-cache-dir https://storage.googleapis.com/docs-theme/rasabaster-0.7.16.tar.gz
     - pip list
     script:
     - eval "$(ssh-agent -s)"; touch platform_docs_key; chmod 0600 platform_docs_key
