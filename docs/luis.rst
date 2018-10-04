@@ -58,5 +58,3 @@ in LUIS.
 LUIS's ``patterns`` feature is very similar to Rasa NLU's `regex features </docs/nlu/dataformat/>`_
 LUIS's ``phrase lists`` feature does not currently have an equivalent in Rasa NLU.
 
-.. raw:: html
-   :file: livechat.html

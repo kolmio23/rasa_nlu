@@ -110,6 +110,4 @@ a graphical user interface, and our customer success program which includes ente
    :text: Learn More about Rasa Platform
    :link: http://rasa.com/products/rasa-platform/
 
-.. raw:: html
-   :file: livechat.html
    
