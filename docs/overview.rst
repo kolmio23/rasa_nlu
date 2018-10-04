@@ -2,10 +2,31 @@
 Start building great chatbots and assistants with the open source conversational AI framework
 =============================================================================================
 
-1. **Understand the Rasa Stack**
-2. `Try it out <https://rasa.com/docs/core/quickstart/>`_ (without installing anything!)
-3. `Install <https://rasa.com/docs/core/installation/>`_ Rasa on your machine
-4. `Join the community <https://forum.rasa.com/>`_ and start building
+Get started with our four simple steps:
+
+  .. image:: ../_static/images/icon_number1.png
+     :width: 31
+     :alt: Step number 1
+     :class: icon-pull-left
+**Understand the Rasa Stack**
+    
+  .. image:: ../_static/images/icon_number2.png
+     :width: 31
+     :alt: Step number 2
+     :class: icon-pull-left
+`Try it out <https://rasa.com/docs/core/quickstart/>`_ (without installing anything!)
+
+  .. image:: ../_static/images/icon_number3.png
+     :width: 31
+     :alt: Step number 3
+     :class: icon-pull-left
+`Install Rasa <https://rasa.com/docs/core/installation/>`_ on your machine
+
+  .. image:: ../_static/images/icon_number4.png
+     :width: 31
+     :alt: Step number 4
+     :class: icon-pull-left
+`Join the community <https://forum.rasa.com/>`_ and start building
 
 The Rasa Stack is a pair of open source libraries (Rasa NLU and Rasa Core) that allow
 developers to expand chatbots and voice assistants beyond answering simple questions.
