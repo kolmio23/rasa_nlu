@@ -52,6 +52,3 @@ Released Rasa NLU 0.13
 - language-agnostic NER
 - support multuple training processes per project
 
-
-.. raw:: html
-   :file: livechat.html

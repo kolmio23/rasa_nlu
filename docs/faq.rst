@@ -154,6 +154,3 @@ If you have a question about how to use Rasa, the `Rasa Community <https://forum
 For bug reports and feature requests, please go to `GitHub <https://github.com/RasaHQ>`_.
 For everything else please email hi@rasa.com
 
-
-.. raw:: html
-   :file: livechat.html
