@@ -25,7 +25,7 @@ Typos and other Small Fixes
 ---------------------------
 
 If you've noticed a small bug or typo, please mention this in an issue,
-or if you feel comfortable, please create a Pull Request with your fix. 
+or if you feel comfortable doing so, please create a Pull Request with your fix. 
 
 New Features
 ------------
