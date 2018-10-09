@@ -8,24 +8,28 @@ Get started with our four simple steps:
      :width: 31
      :alt: Step number 1
      :class: icon-pull-left
+     :target: #
 **Understand the Rasa Stack**
     
   .. image:: ../_static/images/icon_number2.png
      :width: 31
      :alt: Step number 2
      :class: icon-pull-left
+     :target: https://rasa.com/docs/core/quickstart/
 `Try it out <https://rasa.com/docs/core/quickstart/>`_ (without installing anything!)
 
   .. image:: ../_static/images/icon_number3.png
      :width: 31
      :alt: Step number 3
      :class: icon-pull-left
+     :target: https://rasa.com/docs/core/installation/   
 `Install Rasa <https://rasa.com/docs/core/installation/>`_ on your machine
 
   .. image:: ../_static/images/icon_number4.png
      :width: 31
      :alt: Step number 4
      :class: icon-pull-left
+     :target: https://forum.rasa.com/
 `Join the community <https://forum.rasa.com/>`_ and start building
 
 The Rasa Stack is a pair of open source libraries (Rasa NLU and Rasa Core) that allow
