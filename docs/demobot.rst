@@ -12,7 +12,7 @@ This bot showcases how to use:
 - a combination of Rasa NLU + Rasa Core + Duckling
 - webchat on a website
 
-The current release is an alpha version, meaning for now it only has two user
+The current release is an alpha version, meaning for now it only has a few
 goals and not a very large dataset. We strongly believe that to build a real
 bot you need to learn from real data and so we decided to throw the bot out
 there while it’s still not perfect. The more you chat with it, the better it
@@ -24,6 +24,3 @@ requests we get from you.
 
 Thanks for testing the bot! If you’d like to give us feedback or raise any
 bugs/issues with it, feel free to do so in the `repo <https://github.com/RasaHQ/rasa-demo>`_.
-
-.. raw:: html
-   :file: webchat.html
