@@ -34,4 +34,13 @@ jobs:
     - git add -A .
     - git commit -m "[ci skip] Autodoc commit for $COMMIT."
     - git push -q origin newdocs
-
+  - stage: trigger website build
+    script:
+    - openssl aes-256-cbc -K $encrypted_bd37f77887e8_key -iv $encrypted_bd37f77887e8_iv -in website_push.enc -out website_push -d
+    - ssh-add website_push
+    - git config --global user.email "builds@travis-ci.com"
+    - git config --global user.name "Travis CI"
+    - git clone -b master --single-branch git@github.com:RasaHQ/rasa-website.git
+    - cd rasa-website
+    - git commit --allow-empty -m "trigger nlu docs update"
+    - git push origin master
