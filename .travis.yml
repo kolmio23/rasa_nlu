@@ -33,7 +33,7 @@ jobs:
     - cd newdocs
     - cp -R ../docs/_build/dirhtml/* ./
     - git add -A .
-    - git commit -m "[ci skip] Autodoc commit for $COMMIT."
+    - git commit --allow-empty -m "[ci skip] Autodoc commit for $COMMIT."
     - git push -q origin newdocs
   - stage: trigger website build
     script:
