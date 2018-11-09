@@ -45,5 +45,5 @@ jobs:
     - git config --global user.name "Travis CI"
     - git clone -b master --single-branch git@github.com:RasaHQ/rasa-website.git
     - cd rasa-website
-    - git commit --allow-empty -m "trigger nlu docs update"
+    - git commit --allow-empty -m "trigger docs update"
     - git push origin master
