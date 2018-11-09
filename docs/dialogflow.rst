@@ -5,16 +5,11 @@
 Rasa: An Open Source alternative to Google Dialogflow
 =====================================================
 
-Welcome to the wonderful world of open source! 
-Congratulations on embracing a free and fully customizable solution. 
-We've got the steps to migrate from LUIS here, or from LUIS :ref:`here <luis>`. 
+If you have an application built with Google Dialogflow and made a decision to migrate it to a
+free and fully customizable solution Rasa Stack, check out the guide below on how to migrate the
+Google Dialogflow application to Rasa.
 
-`Join our community <https://forum.rasa.com/>`_ and be part of something really big! 
-
-You can use Rasa NLU as an open source drop-in replacement for Google Dialogflow.
-
-Migration from Dialogflow to Rasa is quick and easy.
-Simply load the training data into Rasa and you're all set. Here's how you do it:
+Migration from Google Dialogflow consists of just a few simple steps. Here's how you do it:
 
 
 Step 1: Export your data from Dialogflow
@@ -70,4 +65,6 @@ The words ``intent``, ``entity``, and ``utterance`` have the same meaning in Ras
 In Dialogflow, there is a concept called ``Fulfillment``. In Rasa we call this a `Custom Action </docs/core/customactions/>`_.
 
 Dialogflow also has a Small Talk module. One of our awesome contributors has made a Rasa compatible version of this `here <https://github.com/rahul051296/small-talk-rasa-stack>`_.
+
+If you have migrated your Google Dialogflow application to Rasa, join the `Rasa Community Forum <https://forum.rasa.com/>`_ and share your experience with us! 
 
