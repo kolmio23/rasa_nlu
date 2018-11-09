@@ -3,19 +3,15 @@
 
 .. _luis:
 
-Rasa: An Open Source ALternative to Microsoft LUIS
+Rasa: An Open Source Alternative to Microsoft LUIS
 ==================================================
 
-Welcome to the wonderful world of open source! 
-Congratulations on embracing a free and fully customizable solution. 
-We've got the steps to migrate from LUIS here, or from Dialogflow :ref:`here <dialogflow>`. 
+If you have an application built with Microsoft LUIS and made a decision to migrate it to a
+free and fully customizable solution Rasa Stack, check out the guide below on how to migrate your application from
+LUIS to Rasa.
 
-`Join our community <https://forum.rasa.com/>`_ and be part of something really big! 
+Migration from LUIS consists of just a few simple steps. Here's how you do it:
 
-You can use Rasa NLU as an open source drop-in replacement for Microsoft LUIS.
-
-Migrating from LUIS to Rasa is quick and easy. 
-Simply load your training data into Rasa and you are ready to go. Here's how you do it:
 
 Step 1: Export your Training Data from LUIS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -57,4 +53,7 @@ The words ``intent``, ``entity``, and ``utterance`` have the same meaning in Ras
 in LUIS. 
 LUIS's ``patterns`` feature is very similar to Rasa NLU's `regex features </docs/nlu/dataformat/>`_
 LUIS's ``phrase lists`` feature does not currently have an equivalent in Rasa NLU.
+
+If you have migrated your LUIS application to Rasa, join the `Rasa Community Forum <https://forum.rasa.com/>`_ and share your experience with us! 
+
 
