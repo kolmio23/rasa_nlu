@@ -14,13 +14,13 @@ Install the Rasa Stack on your machine
 
 The recommended way to install the Rasa Stack is using pip (make sure to install both libraries Core and NLU):
 
-.. code-block:: bash
+.. copyable::
 
-    pip install rasa_core
+    pip install -U rasa_core
 
 (Full instructions can be found `in the Core documentation <https://rasa.com/docs/core/installation/>`_.)
 
-.. code-block:: bash
+.. copyable::
 
     pip install rasa_nlu[tensorflow]
 
@@ -35,17 +35,15 @@ Get the Starterpack!
 
 We have prepared a starter-pack which has all the files you need to build your first custom chatbot. On top of that, the starter-pack includes a training data set ready for you to use.
 
-.. code-block:: bash
+.. copyable::
 
     git clone https://github.com/RasaHQ/starter-pack-rasa-stack.git
     cd starter-pack-rasa-stack
 
 Now you've got everything you need to start building your first AI assistant. Learn more about how our community of makers from all over the world can help you.
 
-|
 
 .. button::
     :link: ../get_started_step4/
     :text: Next Step: Join Community
 
-|
