@@ -5,9 +5,9 @@ Getting Training Data for Chatbots and Assistants
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Getting a good training data set is crucial for building a chatbot or assistant. 
-We have a couple of datasets to help you get started on the `Community Forum <https://forum.rasa.com/>`_.
+We have a couple of datasets to help you get started on the `Community Forum <https://forum.rasa.com/t/grab-the-nlu-training-dataset-and-starter-packs/903>`_.
 
-It's also a very good idea to `pretend to be the bot yourself <https://conversations.golastmile.com/put-on-your-robot-costume-and-be-the-minimum-viable-bot-yourself-3e48a5a59308#.d4tmdan68>`_. 
+It's also a very good idea to `pretend to be the bot yourself <https://medium.com/rasa-blog/put-on-your-robot-costume-and-be-the-minimum-viable-bot-yourself-3e48a5a59308>`_. 
 
 But the most important factor is always real user feedback. At Rasa we strongly believe
 that **real conversations are more important than hypothetical ones**.

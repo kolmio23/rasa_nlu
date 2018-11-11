@@ -12,6 +12,11 @@ users. Rasa is production ready and used in large companies everywhere.
 .. image:: ../_static/images/rasa_stack_explained.png
    :width: 1382
    :alt: rasa stack
+   
+The Rasa Stack is a pair of open source libraries (Rasa NLU and Rasa Core) that allow
+developers to expand chatbots and voice assistants beyond answering simple questions.
+Using state-of-the-art machine learning, your bots can hold contextual conversations with
+users. Rasa is production ready and used in large companies everywhere.   
 
 Rasa NLU performs `Natural Language Understanding`, which means taking free-form text like
 
