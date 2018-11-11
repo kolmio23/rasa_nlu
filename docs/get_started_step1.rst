@@ -1,7 +1,7 @@
 .. _get_started_step1:
 
 Step 1: Understand the Rasa Stack
-=============================================================================================
+=================================
 
 TL;DR: Rasa NLU's job is to interpret messages, and Rasa Core's job is to decide what should happen next.
 
@@ -35,7 +35,7 @@ Rasa NLU and Core are independent. You can use NLU without Core, and vice versa.
 
 
 Looking for something specific? See what you can do with the Rasa Stack
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. tinycards::
    :title1: Turn Natural Language Into Structured Data

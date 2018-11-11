@@ -1,7 +1,7 @@
 .. _get_started_step3:
 
 Step 3: Start Building
-=============================================================================================
+======================
 
 Now it is time to build the first AI assistant yourself. If you have installed the Rasa Stack already in the step before, head to the Starterpack  - otherwise, follow the instructions here:
 
@@ -10,7 +10,7 @@ Now it is time to build the first AI assistant yourself. If you have installed t
 
 
 Install the Rasa Stack on your machine
------------------
+--------------------------------------
 
 The recommended way to install the Rasa Stack is using pip (make sure to install both libraries Core and NLU):
 
@@ -30,10 +30,10 @@ The recommended way to install the Rasa Stack is using pip (make sure to install
 Unless you've already got numpy & scipy installed, we highly recommend
 that you install and use `Anaconda <https://www.continuum.io\/downloads>`_.
 
-Get the Starterpack!
------------------
+Get the Starter Pack!
+---------------------
 
-We have prepared a starter-pack which has all the files you need to build your first custom chatbot. On top of that, the starter-pack includes a training data set ready for you to use.
+We have prepared a starter pack which has all the files you need to build your first custom chatbot. On top of that, the starter-pack includes a training data set ready for you to use.
 
 .. copyable::
 

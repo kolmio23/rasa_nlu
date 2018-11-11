@@ -12,7 +12,7 @@ We've put together a "Get Started" guide for you that explains our open source t
    :text: Get Started with the Rasa Stack
 
 Been here before?
-^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 Here are a few useful links:
 
