@@ -37,7 +37,8 @@ extensions = [
     'rasabaster.button',
     'rasabaster.card',
     'rasabaster.smallcards',
-    'rasabaster.tinycards'
+    'rasabaster.tinycards',
+    'rasabaster.copyable'
 ]
 
 
