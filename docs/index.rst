@@ -1,5 +1,5 @@
 Build contextual chatbots and AI assistants with our open source conversational AI framework
-=====
+============================================================================================
 
 Welcome to the Rasa Docs!
 
