@@ -8,7 +8,7 @@ New to Rasa?
 We've put together a "Get Started" guide for you that explains our open source tools and allows you to build your first AI assistant with the Rasa Stack.
 
 .. button::
-   :link: ../get_started_step1/
+   :link: ./get_started_step1/
    :text: Get Started with the Rasa Stack
    :newtab:
 
