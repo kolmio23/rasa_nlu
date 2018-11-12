@@ -3,9 +3,14 @@
 Step 2: Try It Out
 =============================================================================================
 
-Let's train your first AI assistant with the Rasa Stack in the `Quickstart <https://rasa.com/docs/core/quickstart/>`_ - you can choose to run the code right inside the docs or to install it first on your machine. Head back here when you're done to continue with Step 3.
+Let's train your first AI assistant with the Rasa Stack in the Quickstart - you can choose to run the code right inside the docs or to install it first on your machine.
+
+.. button::
+   :link: https://rasa.com/docs/core/quickstart/
+   :text: Open Quickstart
 
 |
+Head back here when you're done to continue with Step 3.
 
 .. button::
    :link: ../get_started_step3/
