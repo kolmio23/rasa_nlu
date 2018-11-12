@@ -19,4 +19,4 @@ Why should you join?
 .. button::
     :link: https://forum.rasa.com/
     :text: Join the Rasa Community
-
+    :newtab:

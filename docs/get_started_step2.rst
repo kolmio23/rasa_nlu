@@ -8,6 +8,7 @@ Let's train your first AI assistant with the Rasa Stack in the Quickstart - you 
 .. button::
    :link: https://rasa.com/docs/core/quickstart/
    :text: Open Quickstart
+   :newtab:
 
 |
 Head back here when you're done to continue with Step 3.

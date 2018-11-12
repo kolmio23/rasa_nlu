@@ -18,13 +18,22 @@ The recommended way to install the Rasa Stack is using pip (make sure to install
 
     pip install -U rasa_core
 
-(Full instructions can be found `in the Core documentation <https://rasa.com/docs/core/installation/>`_.)
+
+.. raw:: html
+
+     (Full instructions can be found <a class="reference external" href="https://rasa.com/docs/core/" target="_blank">in the Core Documentation</a>.)
+
+
 
 .. copyable::
 
     pip install rasa_nlu[tensorflow]
 
-(Full instructions can be found `in the NLU documentation <https://rasa.com/docs/nlu/installation/>`_.)
+
+.. raw:: html
+
+     (Full instructions can be found <a class="reference external" href="https://rasa.com/docs/nlu/" target="_blank">in the NLU Documentation</a>.)
+
 
 
 Unless you've already got numpy & scipy installed, we highly recommend

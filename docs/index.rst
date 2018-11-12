@@ -10,17 +10,32 @@ We've put together a "Get Started" guide for you that explains our open source t
 .. button::
    :link: ../get_started_step1/
    :text: Get Started with the Rasa Stack
+   :newtab:
 
 Been here before?
 ^^^^^^^^^^^^^^^^^
 
 Here are a few useful links:
 
-* `Core Docs <https://rasa.com/docs/core/>`_
-* `NLU Docs <https://rasa.com/docs/nlu/>`_
-* `Platform Docs <https://rasa.com/docs/platform/>`_
-* `Forum <https://forum.rasa.com/>`_
-* `Github <https://github.com/RasaHQ/>`_
+* .. raw:: html
+
+     <a class="reference external" href="https://rasa.com/docs/core/">Core Docs</a>
+
+* .. raw:: html
+
+     <a class="reference external" href="https://rasa.com/docs/nlu/">NLU Docs</a>
+
+* .. raw:: html
+
+     <a class="reference external" href="https://rasa.com/docs/platform/">Platform Docs</a>
+
+* .. raw:: html
+
+     <a class="reference external" href="https://forum.rasa.com/" target="_blank">Forum</a>
+
+* .. raw:: html
+
+     <a class="reference external" href="https://github.com/RasaHQ/" target="_blank">Github</a>
 
 .. toctree::
    :maxdepth: 1
