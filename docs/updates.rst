@@ -3,6 +3,38 @@
 What's New?
 ===========
 
+October 2018
+~~~~~~~~~~~~
+
+Improved support for multiprocessing in the Rasa NLU server. 
+Tensorflow training is now non-blocking in python 3. 
+
+All Rasa Platform users now have access to experimental features.
+Features can be activated via the Rasa Platform UI or programatically 
+using the API. 
+Experimental support for interactive learning in the Rasa Platform UI. 
+
+
+September 2018
+~~~~~~~~~~~~~~
+
+The interactive learning CLI has been re-worked completely and made much
+more user friendly. Users and now undo annotation mistakes, make NLU 
+corrections for both intents and entities, and navigate system predictions
+using arrow keys. 
+Added a socket.io input channel to Rasa Core for real-time messaging.
+Rasa Core's ``evaluate`` script can now be made to fail on prediction errors
+for use in CI. 
+Added support for JWT authentication in the Rasa Core server, improving security.
+The ``UserMessage`` class now tracks which channel the user was active in (e.g. Facebook,
+Slack)
+
+A major release (0.16.0) or Rasa Platform with full support for Rasa Core 0.11.4+ 
+and Rasa NLU 0.13.3+. 
+Added documentation for running Rasa Platform with custom Core and NLU components / classes.
+Added an API endpoint for fetching all service logs for remote debugging of 
+Rasa Platform installations. 
+
 August 2018
 ~~~~~~~~~~~
 
