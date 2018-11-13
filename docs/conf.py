@@ -134,7 +134,7 @@ html_theme_options = {
     'github_user': 'RasaHQ',
     'github_repo': 'rasa_docs',
     'fixed_sidebar': True,
-    'base_url': 'https://rasa.com/docs/getting-started/'
+    'base_url': 'https://rasa.com/docs/'
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
