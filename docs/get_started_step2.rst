@@ -13,4 +13,4 @@ Grab the starter pack and get everything installed and running in no time.
 
 .. button::
    :link: ../get_started_step3/
-   :text: Next Step: Get the Starter Pack
+   :text: Next Step: Start Building
