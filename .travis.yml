@@ -28,7 +28,6 @@ jobs:
     - export ${!TRAVIS*}
     - cd docs
     - wget https://raw.githubusercontent.com/RasaHQ/rasa_core/master/docs/quickstart.rst
-    - cat quickstart.rst > get_started_step2.rst
     - make dirhtml
     - cd ../
     - git clone -b newdocs "https://$GITHUB_TOKEN@github.com/$TRAVIS_REPO_SLUG.git" newdocs
