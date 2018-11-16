@@ -3,7 +3,18 @@
 Step 1: Understand the Rasa Stack
 =================================
 
-TL;DR: Rasa NLU's job is to interpret messages, and Rasa Core's job is to decide what should happen next.
+Don't feel like reading?
+
+.. raw:: html
+
+   <button 
+     class="button"
+     onclick="WebChat.open()">
+     Chat to Sara, the Rasa bot
+   </button>
+
+
+Rasa NLU's job is to interpret messages, and Rasa Core's job is to decide what should happen next.
 
 The Rasa Stack is a framework to build contextual AI assistants and chatbots. It consists of two open source libraries (Rasa NLU and Rasa Core).
 Using state-of-the-art machine learning, your bots can hold contextual conversations with
