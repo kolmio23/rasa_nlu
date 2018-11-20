@@ -1,8 +1,6 @@
 Build contextual chatbots and AI assistants with our open source conversational AI framework
 ============================================================================================
 
-Welcome to the Rasa Docs!
-
 New to Rasa?
 ^^^^^^^^^^^^
 We've put together a "Get Started" guide for you that explains our open source tools and allows you to build your first AI assistant with the Rasa Stack.
@@ -14,8 +12,6 @@ We've put together a "Get Started" guide for you that explains our open source t
 
 Been here before?
 ^^^^^^^^^^^^^^^^^
-
-Here are a few useful links:
 
 * .. raw:: html
 
