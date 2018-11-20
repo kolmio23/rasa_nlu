@@ -1,8 +1,6 @@
 Build contextual chatbots and AI assistants with our open source conversational AI framework
 ============================================================================================
 
-Welcome to the Rasa Docs!
-
 New to Rasa?
 ^^^^^^^^^^^^
 We've put together a "Get Started" guide for you that explains our open source tools and allows you to build your first AI assistant with the Rasa Stack.
@@ -14,8 +12,6 @@ We've put together a "Get Started" guide for you that explains our open source t
 
 Been here before?
 ^^^^^^^^^^^^^^^^^
-
-Here are a few useful links:
 
 * .. raw:: html
 
@@ -36,6 +32,14 @@ Here are a few useful links:
 * .. raw:: html
 
      <a class="reference external" href="https://github.com/RasaHQ/" target="_blank">Github</a>
+     
+.. raw:: html
+    
+     <div class="github-buttons" style="margin-top:24px">
+     <div class="github-button" style="display:inline-block;margin-right:24px;"><h3 style="margin-top:0">Rasa NLU</h3> <a class="github-button" href="https://github.com/RasaHQ/rasa_nlu" data-size="large" data-show-count="true" aria-label="Star RasaHQ/rasa_nlu on GitHub">Star</a></div>
+     <div class="github-button" style="display:inline-block;"><h3 style="margin-top:0">Rasa Core</h3> <a class="github-button" href="https://github.com/RasaHQ/rasa_core" data-size="large" data-show-count="true" aria-label="Star RasaHQ/rasa_nlu on GitHub">Star</a></div>
+     <script async defer src="https://buttons.github.io/buttons.js"></script>
+     </div>
 
 .. toctree::
    :maxdepth: 1
