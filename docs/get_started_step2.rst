@@ -1,3 +1,4 @@
+:webchat_payload: /suggestions
 .. _get_started_step2:
 
 Step 2: Try it Out

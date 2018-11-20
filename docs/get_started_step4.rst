@@ -1,3 +1,4 @@
+:webchat_payload: /suggestions
 .. _get_started_step4:
 
 Step 4: Join the Community

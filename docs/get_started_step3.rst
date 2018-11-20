@@ -1,3 +1,4 @@
+:webchat_payload: /suggestions
 .. _get_started_step3:
 
 Step 3: Start Building
@@ -55,4 +56,3 @@ Now you've got everything you need to start building your first AI assistant. Le
 .. button::
     :link: ../get_started_step4/
     :text: Next Step: Join Community
-
