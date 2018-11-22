@@ -3,20 +3,50 @@
 Step 4: Join the Community
 ==========================
 
-The Rasa community is a diverse group of makers and conversational AI enthusiasts. It's an exciting place where people of different backgrounds and locations work together to make Rasa conversational software better.
+.. raw:: html
 
-Why should you join?
+     The Rasa community is a diverse group of makers and conversational AI enthusiasts. Our community is very active in our <a class="reference external" href="https://forum.rasa.com/" target="_blank">Forum</a>, on <a class="reference external" href="https://github.com/RasaHQ" target="_blank">Github</a> and in <a class="reference external" href="https://forum.rasa.com/c/rasa-community-in-your-area" target="_blank">local user groups</a>.
+
+
+
+.. image:: ../_static/images/community_numbers.png
+     :width: 1382
+     :alt: rasa community
+
+
+
+.. raw:: html
+
+     <div class="github-buttons" style="text-align:center">
+     <div class="github-button" style="display:inline-block;margin-right:24px;"><h3 style="margin-top:0">Rasa NLU</h3> <a class="github-button" href="https://github.com/RasaHQ/rasa_nlu" data-size="large" data-show-count="true" aria-label="Star RasaHQ/rasa_nlu on GitHub">Star</a></div>
+     <div class="github-button" style="display:inline-block;"><h3 style="margin-top:0">Rasa Core</h3> <a class="github-button" href="https://github.com/RasaHQ/rasa_core" data-size="large" data-show-count="true" aria-label="Star RasaHQ/rasa_nlu on GitHub">Star</a></div>
+     <script async defer src="https://buttons.github.io/buttons.js"></script>
+     </div>
+
+
+Why sign up for the Forum?
 ^^^^^^^^^^^^^^^^^^^^
 
-* Stay up to date on product updates, events and resources
 * Get help and find the answers to your questions
 * Ask the Rasa's maintainers questions
-* Make valuable contributions to open source software
-* Collaborate with other community members on projects
+* Stay up to date on product updates, events and resources
 
-|
 
 .. button::
     :link: https://forum.rasa.com/
-    :text: Join the Rasa Community
+    :text: Sign up to Forum
+    :newtab:
+
+|
+
+Why engage on Github?
+^^^^^^^^^^^^^^^^^^^^
+
+* Explore the source code in depth
+* Checkout issues and help solve them
+* Contribute to open source software
+
+.. button::
+    :link: https://github.com/RasaHQ
+    :text: Check out Github
     :newtab:
