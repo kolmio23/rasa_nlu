@@ -7,8 +7,19 @@ install:
 script: true
 jobs:
   include:
-  - stage: docs
-    if: fork = false AND branch = "master"
+  - stage: build docs
+    install:
+    - sudo apt-get update
+    - pip install sphinx==1.7.5 sphinx-autobuild==0.6.0 sphinxcontrib-httpdomain==1.5.0  sphinxcontrib-programoutput==0.11
+    - RASABASTER=rasabaster-0.7.18.tar.gz
+    - curl -sSL -o $RASABASTER "https://storage.googleapis.com/docs-theme/${RASABASTER}?q=$(date +%s%N)"
+    - pip install $RASABASTER
+    script:
+    - cd docs
+    - wget https://raw.githubusercontent.com/RasaHQ/rasa_core/master/docs/quickstart.rst
+    - make dirhtml
+  - stage: build and push docs
+    if: fork = false AND branch = "master" AND type != "pull_request"
     install:
     - sudo apt-get update
     - pip install sphinx==1.7.5 sphinx-autobuild==0.6.0 sphinxcontrib-httpdomain==1.5.0  sphinxcontrib-programoutput==0.11
