@@ -50,7 +50,12 @@ We have prepared a starter pack which has all the files you need to build your f
     git clone https://github.com/RasaHQ/starter-pack-rasa-stack.git
     cd starter-pack-rasa-stack
 
-Now you've got everything you need to start building your first AI assistant. Learn more about how our community of makers from all over the world can help you.
+
+.. raw:: html
+
+     Now you've got everything you need to start building your first AI assistant. You can find detailed docs for Rasa NLU <a class="reference external" href="https://rasa.com/docs/nlu/" target="_blank">here</a> and for Rasa Core <a class="reference external" href="https://rasa.com/docs/core/" target="_blank">here</a>.
+
+Learn more about how our community of makers from all over the world can help you.
 
 
 .. button::
