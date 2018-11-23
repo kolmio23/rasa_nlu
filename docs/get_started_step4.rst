@@ -24,7 +24,7 @@ Step 4: Join the Community
      </div>
 
 
-Why sign up for the Forum?
+Why join the Forum?
 ^^^^^^^^^^^^^^^^^^^^
 
 * Get help and find the answers to your questions
@@ -34,7 +34,7 @@ Why sign up for the Forum?
 
 .. button::
     :link: https://forum.rasa.com/
-    :text: Sign up to Forum
+    :text: Join the Forum
     :newtab:
 
 |
