@@ -1,4 +1,4 @@
-:webchat_payload: /suggestions
+:webchat_payload: /suggestion
 .. _get_started_step3:
 
 Step 3: Start Building
