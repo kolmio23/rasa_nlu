@@ -43,7 +43,7 @@ Why engage on Github?
 ^^^^^^^^^^^^^^^^^^^^
 
 * Explore the source code in depth
-* Checkout issues and help solve them
+* Check out issues and help solve them
 * Contribute to open source software
 
 .. button::
