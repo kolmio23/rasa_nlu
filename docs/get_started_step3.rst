@@ -35,15 +35,19 @@ The recommended way to install the Rasa Stack is using pip (make sure to install
 
      (Full instructions can be found <a class="reference external" href="https://rasa.com/docs/nlu/" target="_blank">in the NLU Documentation</a>.)
 
+|
 
 
-Unless you've already got numpy & scipy installed, we highly recommend
-that you install and use `Anaconda <https://www.continuum.io\/downloads>`_.
+.. raw:: html
+
+     Unless you've already got numpy & scipy installed, we highly recommend that you install and use <a class="reference external" href="https://www.anaconda.com/download/" target="_blank">Anaconda</a>.
 
 Get the Starter Pack!
 ---------------------
 
-We have prepared a starter pack which has all the files you need to build your first custom chatbot. On top of that, the starter-pack includes a training data set ready for you to use.
+.. raw:: html
+
+     We have prepared a <a class="reference external" href="https://github.com/RasaHQ/starter-pack-rasa-stack" target="_blank">Starter Pack</a> which has all the files you need to build your first custom AI assistant and a training data set. Also, this <a class="reference external" href="https://www.youtube.com/watch?v=lQZ_x0LRUbI&t=1s" target="_blank">YouTube tutorial</a> walks you through all the steps.
 
 .. copyable::
 

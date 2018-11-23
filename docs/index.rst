@@ -33,6 +33,15 @@ Been here before?
 
      <a class="reference external" href="https://github.com/RasaHQ/" target="_blank">Github</a>
 
+* .. raw:: html
+
+     <a class="reference external" href="https://www.youtube.com/channel/UCJ0V6493mLvqdiVwOKWBODQ" target="_blank">YouTube</a>
+
+* .. raw:: html
+
+     <a class="reference external" href="http://blog.rasa.com" target="_blank">Blog</a>
+
+
 .. raw:: html
 
      <div class="github-buttons" style="margin-top:24px">
