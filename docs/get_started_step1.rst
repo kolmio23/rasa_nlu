@@ -3,6 +3,17 @@
 Step 1: Understand the Rasa Stack
 =================================
 
+.. raw:: html
+
+   <div class="progress">
+   <ul>
+   <li class="current">1</li>
+   <li>2</li>
+   <li>3</li>
+   <li>4</li>
+   </ul>
+   </div>
+
 Don't feel like reading?
 
 .. raw:: html
@@ -12,7 +23,6 @@ Don't feel like reading?
      onclick="WebChat.open()">
      Chat to Sara, the Rasa bot
    </button>
-
 
 Rasa NLU's job is to interpret messages, and Rasa Core's job is to decide what should happen next.
 

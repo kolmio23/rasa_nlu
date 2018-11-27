@@ -4,6 +4,17 @@
 Step 2: Try it Out
 ==================
 
+.. raw:: html
+
+   <div class="progress">
+   <ul>
+   <li>1</li>
+   <li class="current">2</li>
+   <li>3</li>
+   <li>4</li>
+   </ul>
+   </div>
+
 .. include:: quickstart.rst
   :start-after: start-shared-content
   :end-before: end-shared-content

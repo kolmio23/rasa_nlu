@@ -6,6 +6,17 @@ Step 4: Join the Community
 
 .. raw:: html
 
+   <div class="progress">
+   <ul>
+   <li>1</li>
+   <li>2</li>
+   <li>3</li>
+   <li class="current">4</li>
+   </ul>
+   </div>
+   
+.. raw:: html
+
      The Rasa community is a diverse group of makers and conversational AI enthusiasts. Our community is very active in our <a class="reference external" href="https://forum.rasa.com/" target="_blank">Forum</a>, on <a class="reference external" href="https://github.com/RasaHQ" target="_blank">Github</a> and in <a class="reference external" href="https://forum.rasa.com/c/rasa-community-in-your-area" target="_blank">local user groups</a>.
 
 
