@@ -85,7 +85,7 @@ Looking for something specific? See what you can do with the Rasa Stack
 Rasa Platform: Everything you need to run the Rasa Stack in the Enterprise.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: /_static/images/rasa-platform-diagram.png
+.. image:: https://rasa.com/assets/img/rasa-platform-diagram.png
    :width: 800
    :alt: Rasa Platform
 
