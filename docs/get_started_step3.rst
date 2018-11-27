@@ -4,6 +4,17 @@
 Step 3: Start Building
 ======================
 
+.. raw:: html
+
+   <div class="progress">
+   <ul>
+   <li>1</li>
+   <li>2</li>
+   <li class="current">3</li>
+   <li>4</li>
+   </ul>
+   </div>
+
 Now it is time to build the first AI assistant yourself. If you have installed the Rasa Stack already in the step before, head to the Starterpack  - otherwise, follow the instructions here:
 
 
