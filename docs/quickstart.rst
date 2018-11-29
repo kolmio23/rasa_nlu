@@ -8,14 +8,10 @@ Quickstart
 .. note::
 
     This tutorial will show you the different parts needed to build a bot.
-    You can run the code directly in the documentation, without
-    installing anything! If you would like to run this locally, go to
-    the :ref:`installation` first.
-
-
-In this tutorial you will create your first Rasa Core bot.
-You can run all of the code snippets in here directly, or
-you can install Rasa Core and run the examples on your own machine.
+    You can run the code directly here in the documentation, without
+    installing anything, or you can install Rasa Core and run the examples
+	on your local machine! If you would like to run this locally, go to
+    the :ref:`installation` first to install the Rasa Core.
 
 
 Goal
@@ -58,7 +54,7 @@ like ``utter_greet``, but in general an action can do anything,
 including calling an API and interacting with the outside world.
 
 
-We've written some example stories below, which we can write to a
+We've written some example stories below, which we will write to a
 file called ``stories.md`` If you are running this in the docs, it
 may take a few seconds to start up. If you are running locally,
 copy the text between the triple quotes (``"""``)
@@ -98,16 +94,18 @@ and save it in a file called ``stories.md``.
    """
    %store stories_md > stories.md
 
-   print("Done!")
+   print("The training stories have been successfully saved inside the stories.md file. You can move on to the next step!")
 
 
 2. Define a Domain
 ^^^^^^^^^^^^^^^^^^
 
 The next thing we need to do is define a ``Domain``.
-The domain defines the universe your bot lives in.
+The domain defines the universe your bot lives in: what user inputs it 
+should expect to get, what actions it should be able to predict, how to 
+respond and also, what information to store.
 
-Here is an example domain for our bot which we'll write to a
+Here is an example domain for our bot which you'll write to a
 file called ``domain.yml``:
 
 .. runnable::
@@ -148,7 +146,7 @@ file called ``domain.yml``:
    """
    %store domain_yml > domain.yml
 
-   print("Done!")
+   print("The domain has been successfully saved inside the domain.yml file. You can move on to the next step!")
 
 
 
@@ -163,12 +161,6 @@ So what do the different parts mean?
 +---------------+-------------------------------------------------------------+
 | ``templates`` | template strings for the things your bot can say            |
 +---------------+-------------------------------------------------------------+
-| ``entities``  | pieces of info you want to extract from messages. See       |
-|               | `Rasa NLU <https://rasa.com/docs/nlu/>`_                    |
-+---------------+-------------------------------------------------------------+
-| ``slots``     | information to keep track of during a conversation          |
-|               | (e.g. a users age) - see :ref:`slots`                       |
-+---------------+-------------------------------------------------------------+
 
 
 **How does this fit together?**
@@ -179,15 +171,6 @@ with ``utter_``. They will just respond with a message based on a template
 from the ``templates`` section. See :ref:`customactions` for how to build
 more interesting actions.
 
-In our simple example we don't need ``slots`` and ``entities``,
-so these aren't in the example domain.
-
-.. note::
-
-   There is one additional special action, ``ActionListen``,
-   which means to stop taking further actions until the user
-   says something else. You don't have to include it in
-   your ``domain.yml`` - it is an action included by default.
 
 
 3. Train a Dialogue Model
@@ -195,78 +178,26 @@ so these aren't in the example domain.
 
 The next step is to train a neural network on our example stories.
 To do this, run the command below. If you are running this on your machine,
-leave out the ``!`` at the start. This will train the dialogue model and store it
-into ``models/dialogue``.
+leave out the ``!`` at the start. This command will call the Rasa Core train
+function, pass damain and stories files to it and store the trained model
+into ``models/dialogue``. The output of this command will include the training
+results for each training epoch.
 
 .. runnable::
    :description: core-train-core
 
    !python -m rasa_core.train -d domain.yml -s stories.md -o models/dialogue
 
-   print("Finished training!")
-
-
-
-4. Talking To Your Bot
-^^^^^^^^^^^^^^^^^^^^^^
-
-Now we can use that trained dialogue model to run our bot.
-We haven't included an NLU model yet, though, so we have to send
-structured data to our bot directly.
-
-You can play around with the bot, directly sending in the intents in the domain.
-To do this, start your message with a ``/``.
-Give it a try by sending the message ``/greet``.
-
-If you are running these commands locally, run:
-
-.. code-block:: bash
-
-   python -m rasa_core.run -d models/dialogue
-
-If you are running the cells here in the docs, run this cell:
-
-**This will not work if you haven't run the cells above!**
-
-.. runnable::
-   :description: core-chat-without-nlu
-
-   import IPython
-   from IPython.display import clear_output, HTML, display
-   from rasa_core.agent import Agent
-   import time
-
-   messages = ["Hi! you can chat in this window. Type 'stop' to end the conversation."]
-   agent = Agent.load('models/dialogue')
-
-   def chatlogs_html(messages):
-       messages_html = "".join(["&lt;p&gt;{}&lt;/p&gt;".format(m) for m in messages])
-       chatbot_html = """&lt;div class="chat-window" {}&lt;/div&gt;""".format(messages_html)
-       return chatbot_html
-
-
-   while True:
-       clear_output()
-       display(HTML(chatlogs_html(messages)))
-       time.sleep(0.3)
-       a = input()
-       messages.append(a)
-       if a == 'stop':
-           break
-       responses = agent.handle_message(a)
-       for r in responses:
-           messages.append(r.get("text"))
+   print("Finished training! You can move on to the next step!")
 
 
 
 5. Add NLU
 ^^^^^^^^^^
 
-Of course you want your bot to understand real language, not just structured input.
-
 An interpreter is responsible for parsing messages. It performs the Natural
 Language Understanding (NLU) and transforms the message into structured output.
-In this example we are going to use Rasa NLU for this purpose.
+For this purpose, we are going to use the Rasa NLU.
 
 In Rasa NLU, we need to define the user messages our bot should be able to
 handle in the `Rasa NLU training data format <https://rasa.com/docs/nlu/dataformat/>`_.
@@ -330,9 +261,9 @@ Let's create some intent examples in a file called ``nlu.md``:
    """
    %store nlu_md > nlu.md
 
-   print("Done!")
+   print("The data has been successfully saved inside the nlu.md file! You can move on to the next step!")
 
-Furthermore, we need a configuration file, ``nlu_config.yml``, for the
+Furthermore, we need a configuration file, ``nlu_config.yml``, which defines the components of the
 NLU model:
 
 .. runnable::
@@ -344,28 +275,23 @@ NLU model:
    """
    %store nlu_config > nlu_config.yml
 
-   print("Done!")
+   print("The configuration has been successfully stored inside the nlu_config.yml file. You can now move on to the next step!")
 
-We can now train an NLU model using our examples (make sure to
-`install Rasa NLU <http://rasa.com/docs/nlu/installation/>`_
+We can now train an NLU model using our examples (if you are running the tutorial on your local machine,
+make sure to `install Rasa NLU <http://rasa.com/docs/nlu/installation/>`_
 first).
 
-Let's run
+Run to the cell below to train our NLU model. Once it finishes, a new directory ``models/current/nlu`` will be
+created containing the NLU model. Note that ``current`` stands for project name,
+since this is specified in the train command.
 
 .. runnable::
    :description: core-train-nlu
 
    !python -m rasa_nlu.train -c nlu_config.yml --data nlu.md -o models --fixed_model_name nlu --project current --verbose
+   
+   print("The NLU model has been trained successfully! You can move to the next step!")
 
-
-to train our NLU model. A new directory ``models/current/nlu`` should have been
-created containing the NLU model. Note that ``current`` stands for project name,
-since this is specified in the train command.
-
-.. note::
-
-   To learn more about Rasa NLU
-   head over to the `Rasa NLU documentation <https://rasa.com/docs/nlu/>`_.
 
 6. Talking To Your Bot
 ^^^^^^^^^^^^^^^^^^^^^^
