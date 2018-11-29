@@ -8,9 +8,9 @@ Step 4: Join the Community
 
    <div class="progress">
    <ul>
-   <li>1</li>
-   <li>2</li>
-   <li>3</li>
+   <li><a href="https://rasa.com/docs/get_started_step1/">1</a></li>
+   <li><a href="https://rasa.com/docs/get_started_step2/">2</a></li>
+   <li><a href="https://rasa.com/docs/get_started_step3/">3</a></li>
    <li class="current">4</li>
    </ul>
    </div>

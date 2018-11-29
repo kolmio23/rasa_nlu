@@ -8,10 +8,10 @@ Step 2: Try it Out
 
    <div class="progress">
    <ul>
-   <li>1</li>
+   <li><a href="https://rasa.com/docs/get_started_step1/">1</a></li>
    <li class="current">2</li>
-   <li>3</li>
-   <li>4</li>
+   <li><a href="https://rasa.com/docs/get_started_step3/">3</a></li>
+   <li><a href="https://rasa.com/docs/get_started_step4/">4</a></li>
    </ul>
    </div>
 
