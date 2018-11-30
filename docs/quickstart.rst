@@ -11,7 +11,9 @@ Quickstart
     You can run the code directly here in the documentation, without
     installing anything, or you can install Rasa Core and run the examples on your local machine! If you would like to run this locally, go to the :ref:`installation` first to install the Rasa Core.
 
-
+.. contents:: The tutorial will include the following steps:
+	
+	
 Goal
 ^^^^
 
