@@ -15,25 +15,162 @@ Quickstart
 	
 	
 Goal
-^^^^
+----
 
-
-The bot will ask you how you're doing, and send a picture to
-try and cheer you up if you are sad.
-
+You will build a friendly chatbot which will ask you how you're doing, 
+and send a you a fun picture to cheer you up if you are sad.
 
 .. image:: _static/images/mood_bot.png
 
 
-1. Write Stories
+Teaching the bot to understand you using the Rasa NLU
+-----------------------------------------------------
+
+1. Create NLU examples
+^^^^^^^^^^^^^^^^^^^^^^
+
+You will start by teaching your assistant to understand your messages first.
+For that, you will train the NLU model which will take your inputs in a simple
+text format and extract the structured data, called intents, which will help the bot
+understand what was your message about.
+
+The first thing you will do is define the user messages your bot should be able to
+understand. You will achieve this by defining the intents and providing a few
+possible ways how you would say that specific thing.
+
+Run the code cell below to save the Rasa NLU training examples to the file
+called ``nlu.md``. If you are running locally,
+copy the text between the triple quotes (``"""``)
+and save it in a file called ``stories.md``.:
+
+
+.. runnable::
+   :description: core-write-nlu-data
+
+   nlu_md = """
+   ## intent:greet
+   - hey
+   - hello
+   - hi
+   - good morning
+   - good evening
+   - hey there
+
+   ## intent:goodbye
+   - bye
+   - goodbye
+   - see you around
+   - see you later
+
+   ## intent:mood_affirm
+   - yes
+   - indeed
+   - of course
+   - that sounds good
+   - correct
+
+   ## intent:mood_deny
+   - no
+   - never
+   - I don't think so
+   - don't like that
+   - no way
+   - not really
+
+   ## intent:mood_great
+   - perfect
+   - very good
+   - great
+   - amazing
+   - wonderful
+   - I am feeling very good
+   - I am great
+   - I'm good
+
+   ## intent:mood_unhappy
+   - sad
+   - very sad
+   - unhappy
+   - bad
+   - very bad
+   - awful
+   - terrible
+   - not very good
+   - extremely sad
+   - so sad
+   """
+   %store nlu_md > nlu.md
+
+   print("The data has been successfully saved inside the nlu.md file! You can move on to the next step!")
+
+
+2. Define the NLU model configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Next, you will define the NLU model configuration which will define how the NLU model will be trained
+and how the features from the text inputs will be extracted. In this example, you will use a predefined
+``tensorflow_embedding`` pipeline which you can learn more about here.
+
+The code block below will save the NLU model configuration to the file called ``nlu_config.yml``.
+
+.. runnable::
+   :description: core-write-nlu-config
+
+   nlu_config = """
+   language: en
+   pipeline: tensorflow_embedding
+   """
+   %store nlu_config > nlu_config.yml
+
+   print("The configuration has been successfully stored inside the nlu_config.yml file. You can now move on to the next step!")   
+   
+   
+3. Train the NLU model 
+^^^^^^^^^^^^^^^^^^^^^^
+Now you have all the components needed to train the NLU model. Run the cell below which will call the
+rasa.nlu model, pass the previously defined ``nlu.md`` and ``nlu_config.yml`` files and save the model inside the
+``models/current/nlu`` directory.
+
+.. runnable::
+   :description: core-train-nlu
+
+   !python -m rasa_nlu.train -c nlu_config.yml --data nlu.md -o models --fixed_model_name nlu --project current --verbose
+   
+   print("The NLU model has been trained successfully! You can move to the next step!")   
+   
+   
+4. Test the model
+^^^^^^^^^^^^^^^^^
+Now, you can test the model to see if the bot can understand you. The code block below
+will load the model which you just trained and return the intent classification results
+for the message ``Hello``. You can test it on different messages as well!:
+
+.. runnable::
+   :description: core-test-nlu
+   
+   from rasa_nlu.model import Metadata, Interpreter
+   
+   interpreter = Interpreter.load('./models/current/nlu')
+   print(interpreter.parse(u"Hello"))
+
+
+Teaching the bot to respond using the Rasa Core
+-----------------------------------------------
+
+5. Write Stories
 ^^^^^^^^^^^^^^^^
 
-A good place to start is by writing a few stories.
-Rasa Core works by learning from example conversations, and we'll
-write the first few examples ourselves to kick things off.
+At this stage, you will teach our chatbot to respond to your messages and
+for that, you will use Rasa Core. Rasa Core will train the dialogue management
+model which will predict how the bot should respond at the specific state of the
+conversation.
 
-In this very simple conversation, the user says hello to our bot, and the bot
-says hello back. This is how it looks as a story:
+Rasa Core model will have to learn from real conversational data so this is the
+step you will take next. You will define some training stories which will be used
+to train the model. A story is a real conversation between the user and a bot where
+user inputs are expressed as intents while the responses of the bot are expressed as
+action names. Below is an example of a simple conversation, the user says hello to our
+bot, and the bot says hello back. This is how it looks as a story:
 
 .. code-block:: story
 
@@ -45,20 +182,13 @@ says hello back. This is how it looks as a story:
 A story starts with ``##`` followed by a name (the name is optional).
 lines that start with ``*`` are messages sent by the user.
 Although you don't write the actual message, but rather
-the intent (and the entities) that represent what the user `means`.
-If you don't know about intents and entities, don't worry!
-We will talk about them more later.
+the intent that represents what the user `means`.
 Lines that start with ``-`` are actions taken by your bot.
-In this case all of our actions are just messages sent back to the user,
-like ``utter_greet``, but in general an action can do anything,
+In this case, all of our actions are just messages sent back to the user,
+like ``utter_greet``, but in general, an action can do anything,
 including calling an API and interacting with the outside world.
 
-
-We've written some example stories below, which we will write to a
-file called ``stories.md`` If you are running this in the docs, it
-may take a few seconds to start up. If you are running locally,
-copy the text between the triple quotes (``"""``)
-and save it in a file called ``stories.md``.
+Run the cell below to save the example stories inside the file called 'stories.md':
 
 .. runnable::
    :description: core-write-stories
@@ -97,7 +227,7 @@ and save it in a file called ``stories.md``.
    print("The training stories have been successfully saved inside the stories.md file. You can move on to the next step!")
 
 
-2. Define a Domain
+6. Define a Domain
 ^^^^^^^^^^^^^^^^^^
 
 The next thing we need to do is define a ``Domain``.
@@ -173,15 +303,15 @@ more interesting actions.
 
 
 
-3. Train a Dialogue Model
+7. Train a Dialogue Model
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The next step is to train a neural network on our example stories.
 To do this, run the command below. If you are running this on your machine,
 leave out the ``!`` at the start. This command will call the Rasa Core train
-function, pass damain and stories files to it and store the trained model
-into ``models/dialogue``. The output of this command will include the training
-results for each training epoch.
+function, pass domain and stories files to it and store the trained model
+into ``models/dialogue`` directory. The output of this command will include
+the training results for each training epoch.
 
 .. runnable::
    :description: core-train-core
@@ -191,114 +321,12 @@ results for each training epoch.
    print("Finished training! You can move on to the next step!")
 
 
-
-5. Add NLU
-^^^^^^^^^^
-
-An interpreter is responsible for parsing messages. It performs the Natural
-Language Understanding (NLU) and transforms the message into structured output.
-For this purpose, we are going to use the Rasa NLU.
-
-In Rasa NLU, we need to define the user messages our bot should be able to
-handle in the `Rasa NLU training data format <https://rasa.com/docs/nlu/dataformat/>`_.
-In this tutorial we are going to use Markdown Format for NLU training data.
-Let's create some intent examples in a file called ``nlu.md``:
-
-.. runnable::
-   :description: core-write-nlu-data
-
-   nlu_md = """
-   ## intent:greet
-   - hey
-   - hello
-   - hi
-   - good morning
-   - good evening
-   - hey there
-
-   ## intent:goodbye
-   - bye
-   - goodbye
-   - see you around
-   - see you later
-
-   ## intent:mood_affirm
-   - yes
-   - indeed
-   - of course
-   - that sounds good
-   - correct
-
-   ## intent:mood_deny
-   - no
-   - never
-   - I don't think so
-   - don't like that
-   - no way
-   - not really
-
-   ## intent:mood_great
-   - perfect
-   - very good
-   - great
-   - amazing
-   - wonderful
-   - I am feeling very good
-   - I am great
-   - I'm good
-
-   ## intent:mood_unhappy
-   - sad
-   - very sad
-   - unhappy
-   - bad
-   - very bad
-   - awful
-   - terrible
-   - not very good
-   - extremely sad
-   - so sad
-   """
-   %store nlu_md > nlu.md
-
-   print("The data has been successfully saved inside the nlu.md file! You can move on to the next step!")
-
-Furthermore, we need a configuration file, ``nlu_config.yml``, which defines the components of the
-NLU model:
-
-.. runnable::
-   :description: core-write-nlu-config
-
-   nlu_config = """
-   language: en
-   pipeline: tensorflow_embedding
-   """
-   %store nlu_config > nlu_config.yml
-
-   print("The configuration has been successfully stored inside the nlu_config.yml file. You can now move on to the next step!")
-
-We can now train an NLU model using our examples (if you are running the tutorial on your local machine,
-make sure to `install Rasa NLU <http://rasa.com/docs/nlu/installation/>`_
-first).
-
-Run to the cell below to train our NLU model. Once it finishes, a new directory ``models/current/nlu`` will be
-created containing the NLU model. Note that ``current`` stands for project name,
-since this is specified in the train command.
-
-.. runnable::
-   :description: core-train-nlu
-
-   !python -m rasa_nlu.train -c nlu_config.yml --data nlu.md -o models --fixed_model_name nlu --project current --verbose
-   
-   print("The NLU model has been trained successfully! You can move to the next step!")
-
-
-6. Talking To Your Bot
+8. Talk To Your Bot
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Now that we've added an NLU model, you can talk to your bot using natural language,
-rather than typing in structured input. Let's start up your full bot, including
-both Rasa Core and Rasa NLU models!
+And that's it! You now have everything you need to start interacting with you bot!
+Let's start up your full bot, including both Rasa Core and Rasa NLU models using the
+commands below!
 
 If you are running these commands locally, run:
 
