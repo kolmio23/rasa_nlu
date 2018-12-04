@@ -7,9 +7,15 @@ Quickstart
 
 
 This tutorial will show you the different parts needed to build a bot.
+<<<<<<< HEAD
 You can run the code directly here in the documentation, without installing
 anything, or you can install Rasa Core and run the examples on your local
 machine! If you would like to run this locally, go to the :ref:`get_started_step3`
+=======
+You can run the code directly here in the documentation without
+installing anything, or you can install Rasa Core and run the examples on your 
+local machine! If you would like to run this locally, go to the :ref:`get_started_step3` 
+>>>>>>> 65785fb05615329935bff96925cde40a750a66d5
 first to install the Rasa Core.
 
 .. contents:: The tutorial will include the following steps:
@@ -18,7 +24,11 @@ first to install the Rasa Core.
 Goal
 ----
 
+<<<<<<< HEAD
 You will build a friendly chatbot which will ask you how you're doing,
+=======
+You will build a friendly chatbot which will ask you how you're doing 
+>>>>>>> 65785fb05615329935bff96925cde40a750a66d5
 and send a you a fun picture to cheer you up if you are sad.
 
 .. image:: _static/images/mood_bot.png
@@ -37,11 +47,17 @@ will help the bot understand your message.
 
 The first thing you will do is define the user messages your bot should
 understand. You will achieve this by defining the intents and providing a few
-possible ways how you would say that specific thing.
+ways users might express them.
 
 Run the code cell below to save the Rasa NLU training examples to the file
+<<<<<<< HEAD
 called ``nlu.md``. If you are running locally, copy the text between the triple
 quotes (``"""``) and save it in a file called ``stories.md``.:
+=======
+``nlu.md``. If you are running locally,
+copy the text between the triple quotes (``"""``)
+and save it in a file called ``stories.md``.:
+>>>>>>> 65785fb05615329935bff96925cde40a750a66d5
 
 
 .. runnable::
@@ -168,9 +184,9 @@ Teaching the bot to respond using Rasa Core
 5. Write Stories
 ^^^^^^^^^^^^^^^^
 
-At this stage, you will teach our chatbot to respond to your messages and
+At this stage, you will teach your chatbot to respond to your messages using Rasa Core
 for that, you will use Rasa Core. Rasa Core will train the dialogue management
-model which will predict how the bot should respond at the specific state of the
+model and predict how the bot should respond at the specific state of the
 conversation.
 
 Rasa Core models learn from real conversational data in the form of training "stories".
@@ -238,9 +254,15 @@ Run the cell below to save the example stories inside the file called 'stories.m
 ^^^^^^^^^^^^^^^^^^
 
 The next thing we need to do is define a ``Domain``.
+<<<<<<< HEAD
 The domain defines the universe your bot lives in - what user inputs it
 should expect to get, what actions it should be able to predict, how to
 respond and also, what information to store.
+=======
+The domain defines the universe your bot lives in - what user inputs it 
+should expect to get, what actions it should be able to predict, how to 
+respond and what information to store.
+>>>>>>> 65785fb05615329935bff96925cde40a750a66d5
 
 Here is an example domain for our bot which you'll write to a
 file called ``domain.yml``:
@@ -317,7 +339,7 @@ The next step is to train a neural network on our example stories.
 To do this, run the command below. If you are running this on your machine,
 leave out the ``!`` at the start. This command will call the Rasa Core train
 function, pass domain and stories files to it and store the trained model
-into ``models/dialogue`` directory. The output of this command will include
+into the ``models/dialogue`` directory. The output of this command will include
 the training results for each training epoch.
 
 .. runnable::
@@ -331,7 +353,7 @@ the training results for each training epoch.
 8. Talk To Your Bot
 ^^^^^^^^^^^^^^^^^^^^^^
 
-And that's it! You now have everything you need to start interacting with you bot!
+And that's it! You now have everything you need to start interacting with your bot!
 Let's start up your full bot, including both Rasa Core and Rasa NLU models using
 the commands below!
 
