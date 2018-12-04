@@ -7,15 +7,9 @@ Quickstart
 
 
 This tutorial will show you the different parts needed to build a bot.
-<<<<<<< HEAD
-You can run the code directly here in the documentation, without installing
-anything, or you can install Rasa Core and run the examples on your local
-machine! If you would like to run this locally, go to the :ref:`get_started_step3`
-=======
 You can run the code directly here in the documentation without
 installing anything, or you can install Rasa Core and run the examples on your 
-local machine! If you would like to run this locally, go to the :ref:`get_started_step3` 
->>>>>>> 65785fb05615329935bff96925cde40a750a66d5
+local machine! If you would like to run this locally, go to the :ref:`get_started_step3`
 first to install the Rasa Core.
 
 .. contents:: The tutorial will include the following steps:
@@ -23,12 +17,7 @@ first to install the Rasa Core.
 	
 Goal
 ----
-
-<<<<<<< HEAD
-You will build a friendly chatbot which will ask you how you're doing,
-=======
-You will build a friendly chatbot which will ask you how you're doing 
->>>>>>> 65785fb05615329935bff96925cde40a750a66d5
+You will build a friendly chatbot which will ask you how you're doing
 and send a you a fun picture to cheer you up if you are sad.
 
 .. image:: _static/images/mood_bot.png
@@ -50,14 +39,9 @@ understand. You will achieve this by defining the intents and providing a few
 ways users might express them.
 
 Run the code cell below to save the Rasa NLU training examples to the file
-<<<<<<< HEAD
-called ``nlu.md``. If you are running locally, copy the text between the triple
-quotes (``"""``) and save it in a file called ``stories.md``.:
-=======
 ``nlu.md``. If you are running locally,
 copy the text between the triple quotes (``"""``)
-and save it in a file called ``stories.md``.:
->>>>>>> 65785fb05615329935bff96925cde40a750a66d5
+and save it in a file called ``nlu.md``.:
 
 
 .. runnable::
@@ -254,16 +238,9 @@ Run the cell below to save the example stories inside the file called 'stories.m
 ^^^^^^^^^^^^^^^^^^
 
 The next thing we need to do is define a ``Domain``.
-<<<<<<< HEAD
-The domain defines the universe your bot lives in - what user inputs it
-should expect to get, what actions it should be able to predict, how to
-respond and also, what information to store.
-=======
 The domain defines the universe your bot lives in - what user inputs it 
 should expect to get, what actions it should be able to predict, how to 
-respond and what information to store.
->>>>>>> 65785fb05615329935bff96925cde40a750a66d5
-
+respond and what information to store.  
 Here is an example domain for our bot which you'll write to a
 file called ``domain.yml``:
 
