@@ -5,11 +5,10 @@ Quickstart
 
 .. start-shared-content 
 
-.. note::
 
-    This tutorial will show you the different parts needed to build a bot.
-    You can run the code directly here in the documentation, without
-    installing anything, or you can install Rasa Core and run the examples on your local machine! If you would like to run this locally, go to the :ref:`installation` first to install the Rasa Core.
+This tutorial will show you the different parts needed to build a bot.
+You can run the code directly here in the documentation, without
+installing anything, or you can install Rasa Core and run the examples on your local machine! If you would like to run this locally, go to the :ref:`installation` first to install the Rasa Core.
 
 .. contents:: The tutorial will include the following steps:
 	
@@ -23,8 +22,8 @@ and send a you a fun picture to cheer you up if you are sad.
 .. image:: _static/images/mood_bot.png
 
 
-Teaching the bot to understand you using the Rasa NLU
------------------------------------------------------
+Teaching the bot to understand user inputs using Rasa NLU
+---------------------------------------------------------
 
 1. Create NLU examples
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -143,19 +142,24 @@ rasa.nlu model, pass the previously defined ``nlu.md`` and ``nlu_config.yml`` fi
 ^^^^^^^^^^^^^^^^^
 Now, you can test the model to see if the bot can understand you. The code block below
 will load the model which you just trained and return the intent classification results
-for the message ``Hello``. You can test it on different messages as well!:
+for the message ``Hello``. You can test it on different messages as well, simply change ``Hello`` string with the input you would like to test the model on!:
 
 .. runnable::
    :description: core-test-nlu
    
    from rasa_nlu.model import Metadata, Interpreter
+   import json
+   
+   def pprint(o):
+    # small helper to make dict dumps a bit prettier
+       print(json.dumps(o, indent=2))
    
    interpreter = Interpreter.load('./models/current/nlu')
    print(interpreter.parse(u"Hello"))
 
 
-Teaching the bot to respond using the Rasa Core
------------------------------------------------
+Teaching the bot to respond using Rasa Core
+-------------------------------------------
 
 5. Write Stories
 ^^^^^^^^^^^^^^^^
@@ -231,7 +235,7 @@ Run the cell below to save the example stories inside the file called 'stories.m
 ^^^^^^^^^^^^^^^^^^
 
 The next thing we need to do is define a ``Domain``.
-The domain defines the universe your bot lives in: what user inputs it 
+The domain defines the universe your bot lives in - what user inputs it 
 should expect to get, what actions it should be able to predict, how to 
 respond and also, what information to store.
 
