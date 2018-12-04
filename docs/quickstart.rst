@@ -30,10 +30,10 @@ Teaching the bot to understand user inputs using Rasa NLU
 
 You will start by teaching your assistant to understand your messages first.
 For that, you will train the NLU model which will take your inputs in a simple
-text format and extract the structured data, called intents, which will help the bot
-understand what was your message about.
+text format and extract structured data. This structured data, called intents, will help the bot
+understand your message.
 
-The first thing you will do is define the user messages your bot should be able to
+The first thing you will do is define the user messages your bot should
 understand. You will achieve this by defining the intents and providing a few
 possible ways how you would say that specific thing.
 
