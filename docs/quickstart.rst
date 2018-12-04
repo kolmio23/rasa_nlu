@@ -7,9 +7,9 @@ Quickstart
 
 
 This tutorial will show you the different parts needed to build a bot.
-You can run the code directly here in the documentation, without
-installing anything, or you can install Rasa Core and run the examples on your 
-local machine! If you would like to run this locally, go to the :ref:`get_started_step3` 
+You can run the code directly here in the documentation, without installing
+anything, or you can install Rasa Core and run the examples on your local
+machine! If you would like to run this locally, go to the :ref:`get_started_step3`
 first to install the Rasa Core.
 
 .. contents:: The tutorial will include the following steps:
@@ -18,7 +18,7 @@ first to install the Rasa Core.
 Goal
 ----
 
-You will build a friendly chatbot which will ask you how you're doing, 
+You will build a friendly chatbot which will ask you how you're doing,
 and send a you a fun picture to cheer you up if you are sad.
 
 .. image:: _static/images/mood_bot.png
@@ -40,9 +40,8 @@ understand. You will achieve this by defining the intents and providing a few
 possible ways how you would say that specific thing.
 
 Run the code cell below to save the Rasa NLU training examples to the file
-called ``nlu.md``. If you are running locally,
-copy the text between the triple quotes (``"""``)
-and save it in a file called ``stories.md``.:
+called ``nlu.md``. If you are running locally, copy the text between the triple
+quotes (``"""``) and save it in a file called ``stories.md``.:
 
 
 .. runnable::
@@ -108,12 +107,12 @@ and save it in a file called ``stories.md``.:
 2. Define the NLU model configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Next, you will define the NLU model configuration which will define how the NLU 
-model will be trained and how the features from the text inputs will be extracted.
-In this example, you will use a predefined ``tensorflow_embedding`` pipeline which
-you can learn more about `here <https://rasa.com/docs/nlu/choosing_pipeline/>`_.
+The NLU model configuration defines how the NLU model will be trained and how the
+features from the text inputs will be extracted. In this example, you will use a
+predefined ``tensorflow_embedding`` pipeline which you can learn more about
+`here <https://rasa.com/docs/nlu/choosing_pipeline/>`_.
 
-The code block below will save the NLU model configuration to the file called 
+The code block below will save the NLU model configuration to the file called
 ``nlu_config.yml``.
 
 .. runnable::
@@ -131,7 +130,7 @@ The code block below will save the NLU model configuration to the file called
 3. Train the NLU model 
 ^^^^^^^^^^^^^^^^^^^^^^
 Now you have all the components needed to train the NLU model. Run the cell below
-which will call the rasa.nlu model, pass the previously defined ``nlu.md`` and 
+which will call the rasa.nlu model, pass the previously defined ``nlu.md`` and
 ``nlu_config.yml`` files and save the model inside the ``models/current/nlu`` directory.
 
 .. runnable::
@@ -147,7 +146,7 @@ which will call the rasa.nlu model, pass the previously defined ``nlu.md`` and
 Now, you can test the model to see if the bot can understand you. The code block
 below will load the model which you just trained and return the intent classification
 results for the message ``Hello``. You can test it on different messages as well,
-simply change ``Hello`` string with the input you would like to test the model on:
+by editing the ``Hello`` string:
 
 .. runnable::
    :description: core-test-nlu
@@ -174,12 +173,11 @@ for that, you will use Rasa Core. Rasa Core will train the dialogue management
 model which will predict how the bot should respond at the specific state of the
 conversation.
 
-Rasa Core model will have to learn from real conversational data so this is the
-step you will take next. You will define some training stories which will be used
-to train the model. A story is a real conversation between the user and a bot where
-user inputs are expressed as intents while the responses of the bot are expressed
-as action names. Below is an example of a simple conversation, the user says hello
-to our bot, and the bot says hello back. This is how it looks as a story:
+Rasa Core models learn from real conversational data in the form of training "stories".
+A story is a real conversation between a user and a bot where user inputs are expressed
+as intents and the responses of the bot are expressed as action names. Below is an example
+of a simple conversation: the user says hello to our bot, and the bot says hello back.
+This is how it looks as a story:
 
 .. code-block:: story
 
@@ -240,8 +238,8 @@ Run the cell below to save the example stories inside the file called 'stories.m
 ^^^^^^^^^^^^^^^^^^
 
 The next thing we need to do is define a ``Domain``.
-The domain defines the universe your bot lives in - what user inputs it 
-should expect to get, what actions it should be able to predict, how to 
+The domain defines the universe your bot lives in - what user inputs it
+should expect to get, what actions it should be able to predict, how to
 respond and also, what information to store.
 
 Here is an example domain for our bot which you'll write to a
