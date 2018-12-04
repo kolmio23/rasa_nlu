@@ -5,273 +5,44 @@ Quickstart
 
 .. start-shared-content 
 
-.. note::
 
-    This tutorial will show you the different parts needed to build a bot.
-    You can run the code directly in the documentation, without
-    installing anything! If you would like to run this locally, go to
-    the :ref:`installation` first.
+This tutorial will show you the different parts needed to build a bot.
+You can run the code directly here in the documentation without
+installing anything, or you can install Rasa Core and run the examples on your 
+local machine! If you would like to run this locally, go to the :ref:`get_started_step3`
+first to install the Rasa Core.
 
-
-In this tutorial you will create your first Rasa Core bot.
-You can run all of the code snippets in here directly, or
-you can install Rasa Core and run the examples on your own machine.
-
-
+.. contents:: The tutorial will include the following steps:
+	
+	
 Goal
-^^^^
-
-
-The bot will ask you how you're doing, and send a picture to
-try and cheer you up if you are sad.
-
+----
+You will build a friendly chatbot which will ask you how you're doing
+and send a you a fun picture to cheer you up if you are sad.
 
 .. image:: _static/images/mood_bot.png
 
 
-1. Write Stories
-^^^^^^^^^^^^^^^^
+Teaching the bot to understand user inputs using Rasa NLU
+---------------------------------------------------------
 
-A good place to start is by writing a few stories.
-Rasa Core works by learning from example conversations, and we'll
-write the first few examples ourselves to kick things off.
-
-In this very simple conversation, the user says hello to our bot, and the bot
-says hello back. This is how it looks as a story:
-
-.. code-block:: story
-
-   ## story1
-   * greet
-      - utter_greet
-
-
-A story starts with ``##`` followed by a name (the name is optional).
-lines that start with ``*`` are messages sent by the user.
-Although you don't write the actual message, but rather
-the intent (and the entities) that represent what the user `means`.
-If you don't know about intents and entities, don't worry!
-We will talk about them more later.
-Lines that start with ``-`` are actions taken by your bot.
-In this case all of our actions are just messages sent back to the user,
-like ``utter_greet``, but in general an action can do anything,
-including calling an API and interacting with the outside world.
-
-
-We've written some example stories below, which we can write to a
-file called ``stories.md`` If you are running this in the docs, it
-may take a few seconds to start up. If you are running locally,
-copy the text between the triple quotes (``"""``)
-and save it in a file called ``stories.md``.
-
-.. runnable::
-   :description: core-write-stories
-
-   stories_md = """
-   ## happy path
-   * greet
-     - utter_greet
-   * mood_great
-     - utter_happy
-
-   ## sad path 1
-   * greet
-     - utter_greet
-   * mood_unhappy
-     - utter_cheer_up
-     - utter_did_that_help
-   * mood_affirm
-     - utter_happy
-
-   ## sad path 2
-   * greet
-     - utter_greet
-   * mood_unhappy
-     - utter_cheer_up
-     - utter_did_that_help
-   * mood_deny
-     - utter_goodbye
-
-   ## say goodbye
-   * goodbye
-     - utter_goodbye
-   """
-   %store stories_md > stories.md
-
-   print("Done!")
-
-
-2. Define a Domain
-^^^^^^^^^^^^^^^^^^
-
-The next thing we need to do is define a ``Domain``.
-The domain defines the universe your bot lives in.
-
-Here is an example domain for our bot which we'll write to a
-file called ``domain.yml``:
-
-.. runnable::
-   :description: core-write-domain
-
-   domain_yml = """
-   intents:
-     - greet
-     - goodbye
-     - mood_affirm
-     - mood_deny
-     - mood_great
-     - mood_unhappy
-
-   actions:
-   - utter_greet
-   - utter_cheer_up
-   - utter_did_that_help
-   - utter_happy
-   - utter_goodbye
-
-   templates:
-     utter_greet:
-     - text: "Hey! How are you?"
-
-     utter_cheer_up:
-     - text: "Here is something to cheer you up:"
-       image: "https://i.imgur.com/nGF1K8f.jpg"
-
-     utter_did_that_help:
-     - text: "Did that help you?"
-
-     utter_happy:
-     - text: "Great carry on!"
-
-     utter_goodbye:
-     - text: "Bye"
-   """
-   %store domain_yml > domain.yml
-
-   print("Done!")
-
-
-
-So what do the different parts mean?
-
-
-+---------------+-------------------------------------------------------------+
-| ``intents``   | things you expect users to say. See                         |
-|               | `Rasa NLU <https://rasa.com/docs/nlu/>`_                    |
-+---------------+-------------------------------------------------------------+
-| ``actions``   | things your bot can do and say                              |
-+---------------+-------------------------------------------------------------+
-| ``templates`` | template strings for the things your bot can say            |
-+---------------+-------------------------------------------------------------+
-| ``entities``  | pieces of info you want to extract from messages. See       |
-|               | `Rasa NLU <https://rasa.com/docs/nlu/>`_                    |
-+---------------+-------------------------------------------------------------+
-| ``slots``     | information to keep track of during a conversation          |
-|               | (e.g. a users age) - see :ref:`slots`                       |
-+---------------+-------------------------------------------------------------+
-
-
-**How does this fit together?**
-Rasa Core's job is to choose the right action to execute at each step
-of the conversation. Simple actions are just sending a message to a user.
-These simple actions are the ``actions`` in the domain, which start
-with ``utter_``. They will just respond with a message based on a template
-from the ``templates`` section. See :ref:`customactions` for how to build
-more interesting actions.
-
-In our simple example we don't need ``slots`` and ``entities``,
-so these aren't in the example domain.
-
-.. note::
-
-   There is one additional special action, ``ActionListen``,
-   which means to stop taking further actions until the user
-   says something else. You don't have to include it in
-   your ``domain.yml`` - it is an action included by default.
-
-
-3. Train a Dialogue Model
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The next step is to train a neural network on our example stories.
-To do this, run the command below. If you are running this on your machine,
-leave out the ``!`` at the start. This will train the dialogue model and store it
-into ``models/dialogue``.
-
-.. runnable::
-   :description: core-train-core
-
-   !python -m rasa_core.train -d domain.yml -s stories.md -o models/dialogue
-
-   print("Finished training!")
-
-
-
-4. Talking To Your Bot
+1. Create NLU examples
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Now we can use that trained dialogue model to run our bot.
-We haven't included an NLU model yet, though, so we have to send
-structured data to our bot directly.
+You will start by teaching your assistant to understand your messages first.
+For that, you will train the NLU model which will take your inputs in a simple
+text format and extract structured data. This structured data, called intents, 
+will help the bot understand your message.
 
-You can play around with the bot, directly sending in the intents in the domain.
-To do this, start your message with a ``/``.
-Give it a try by sending the message ``/greet``.
+The first thing you will do is define the user messages your bot should
+understand. You will achieve this by defining the intents and providing a few
+ways users might express them.
 
-If you are running these commands locally, run:
+Run the code cell below to save the Rasa NLU training examples to the file
+``nlu.md``. If you are running locally,
+copy the text between the triple quotes (``"""``)
+and save it in a file called ``nlu.md``.:
 
-.. code-block:: bash
-
-   python -m rasa_core.run -d models/dialogue
-
-If you are running the cells here in the docs, run this cell:
-
-**This will not work if you haven't run the cells above!**
-
-.. runnable::
-   :description: core-chat-without-nlu
-
-   import IPython
-   from IPython.display import clear_output, HTML, display
-   from rasa_core.agent import Agent
-   import time
-
-   messages = ["Hi! you can chat in this window. Type 'stop' to end the conversation."]
-   agent = Agent.load('models/dialogue')
-
-   def chatlogs_html(messages):
-       messages_html = "".join(["&lt;p&gt;{}&lt;/p&gt;".format(m) for m in messages])
-       chatbot_html = """&lt;div class="chat-window" {}&lt;/div&gt;""".format(messages_html)
-       return chatbot_html
-
-
-   while True:
-       clear_output()
-       display(HTML(chatlogs_html(messages)))
-       time.sleep(0.3)
-       a = input()
-       messages.append(a)
-       if a == 'stop':
-           break
-       responses = agent.handle_message(a)
-       for r in responses:
-           messages.append(r.get("text"))
-
-
-
-5. Add NLU
-^^^^^^^^^^
-
-Of course you want your bot to understand real language, not just structured input.
-
-An interpreter is responsible for parsing messages. It performs the Natural
-Language Understanding (NLU) and transforms the message into structured output.
-In this example we are going to use Rasa NLU for this purpose.
-
-In Rasa NLU, we need to define the user messages our bot should be able to
-handle in the `Rasa NLU training data format <https://rasa.com/docs/nlu/dataformat/>`_.
-In this tutorial we are going to use Markdown Format for NLU training data.
-Let's create some intent examples in a file called ``nlu.md``:
 
 .. runnable::
    :description: core-write-nlu-data
@@ -330,10 +101,19 @@ Let's create some intent examples in a file called ``nlu.md``:
    """
    %store nlu_md > nlu.md
 
-   print("Done!")
+   print("The data has been successfully saved inside the nlu.md file! You can move on to the next step!")
 
-Furthermore, we need a configuration file, ``nlu_config.yml``, for the
-NLU model:
+
+2. Define the NLU model configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The NLU model configuration defines how the NLU model will be trained and how the
+features from the text inputs will be extracted. In this example, you will use a
+predefined ``tensorflow_embedding`` pipeline which you can learn more about
+`here <https://rasa.com/docs/nlu/choosing_pipeline/>`_.
+
+The code block below will save the NLU model configuration to the file called
+``nlu_config.yml``.
 
 .. runnable::
    :description: core-write-nlu-config
@@ -344,35 +124,215 @@ NLU model:
    """
    %store nlu_config > nlu_config.yml
 
-   print("Done!")
-
-We can now train an NLU model using our examples (make sure to
-`install Rasa NLU <http://rasa.com/docs/nlu/installation/>`_
-first).
-
-Let's run
+   print("The configuration has been successfully stored inside the nlu_config.yml file. You can now move on to the next step!")   
+   
+   
+3. Train the NLU model 
+^^^^^^^^^^^^^^^^^^^^^^
+Now you have all the components needed to train the NLU model. Run the cell below
+which will call the rasa.nlu model, pass the previously defined ``nlu.md`` and
+``nlu_config.yml`` files and save the model inside the ``models/current/nlu`` directory.
 
 .. runnable::
    :description: core-train-nlu
 
    !python -m rasa_nlu.train -c nlu_config.yml --data nlu.md -o models --fixed_model_name nlu --project current --verbose
+   
+   print("The NLU model has been trained successfully! You can move to the next step!")   
+   
+   
+4. Test the model
+^^^^^^^^^^^^^^^^^
+Now, you can test the model to see if the bot can understand you. The code block
+below will load the model which you just trained and return the intent classification
+results for the message ``Hello``. You can test it on different messages as well,
+by editing the ``Hello`` string:
+
+.. runnable::
+   :description: core-test-nlu
+   
+   from rasa_nlu.model import Metadata, Interpreter
+   import json
+   
+   def pprint(o):
+    # small helper to make dict dumps a bit prettier
+       print(json.dumps(o, indent=2))
+   
+   interpreter = Interpreter.load('./models/current/nlu')
+   print(interpreter.parse(u"Hello"))
 
 
-to train our NLU model. A new directory ``models/current/nlu`` should have been
-created containing the NLU model. Note that ``current`` stands for project name,
-since this is specified in the train command.
+Teaching the bot to respond using Rasa Core
+-------------------------------------------
 
-.. note::
+5. Write Stories
+^^^^^^^^^^^^^^^^
 
-   To learn more about Rasa NLU
-   head over to the `Rasa NLU documentation <https://rasa.com/docs/nlu/>`_.
+At this stage, you will teach your chatbot to respond to your messages using Rasa Core
+for that, you will use Rasa Core. Rasa Core will train the dialogue management
+model and predict how the bot should respond at the specific state of the
+conversation.
 
-6. Talking To Your Bot
+Rasa Core models learn from real conversational data in the form of training "stories".
+A story is a real conversation between a user and a bot where user inputs are expressed
+as intents and the responses of the bot are expressed as action names. Below is an example
+of a simple conversation: the user says hello to our bot, and the bot says hello back.
+This is how it looks as a story:
+
+.. code-block:: story
+
+   ## story1
+   * greet
+      - utter_greet
+
+
+A story starts with ``##`` followed by a name (the name is optional).
+lines that start with ``*`` are messages sent by the user.
+Although you don't write the actual message, but rather
+the intent that represents what the user `means`.
+Lines that start with ``-`` are actions taken by your bot.
+In this case, all of our actions are just messages sent back to the user,
+like ``utter_greet``, but in general, an action can do anything,
+including calling an API and interacting with the outside world.
+
+Run the cell below to save the example stories inside the file called 'stories.md':
+
+.. runnable::
+   :description: core-write-stories
+
+   stories_md = """
+   ## happy path
+   * greet
+     - utter_greet
+   * mood_great
+     - utter_happy
+
+   ## sad path 1
+   * greet
+     - utter_greet
+   * mood_unhappy
+     - utter_cheer_up
+     - utter_did_that_help
+   * mood_affirm
+     - utter_happy
+
+   ## sad path 2
+   * greet
+     - utter_greet
+   * mood_unhappy
+     - utter_cheer_up
+     - utter_did_that_help
+   * mood_deny
+     - utter_goodbye
+
+   ## say goodbye
+   * goodbye
+     - utter_goodbye
+   """
+   %store stories_md > stories.md
+
+   print("The training stories have been successfully saved inside the stories.md file. You can move on to the next step!")
+
+
+6. Define a Domain
+^^^^^^^^^^^^^^^^^^
+
+The next thing we need to do is define a ``Domain``.
+The domain defines the universe your bot lives in - what user inputs it 
+should expect to get, what actions it should be able to predict, how to 
+respond and what information to store.  
+Here is an example domain for our bot which you'll write to a
+file called ``domain.yml``:
+
+.. runnable::
+   :description: core-write-domain
+
+   domain_yml = """
+   intents:
+     - greet
+     - goodbye
+     - mood_affirm
+     - mood_deny
+     - mood_great
+     - mood_unhappy
+
+   actions:
+   - utter_greet
+   - utter_cheer_up
+   - utter_did_that_help
+   - utter_happy
+   - utter_goodbye
+
+   templates:
+     utter_greet:
+     - text: "Hey! How are you?"
+
+     utter_cheer_up:
+     - text: "Here is something to cheer you up:"
+       image: "https://i.imgur.com/nGF1K8f.jpg"
+
+     utter_did_that_help:
+     - text: "Did that help you?"
+
+     utter_happy:
+     - text: "Great carry on!"
+
+     utter_goodbye:
+     - text: "Bye"
+   """
+   %store domain_yml > domain.yml
+
+   print("The domain has been successfully saved inside the domain.yml file. You can move on to the next step!")
+
+
+
+So what do the different parts mean?
+
+
++---------------+-------------------------------------------------------------+
+| ``intents``   | things you expect users to say. See                         |
+|               | `Rasa NLU <https://rasa.com/docs/nlu/>`_                    |
++---------------+-------------------------------------------------------------+
+| ``actions``   | things your bot can do and say                              |
++---------------+-------------------------------------------------------------+
+| ``templates`` | template strings for the things your bot can say            |
++---------------+-------------------------------------------------------------+
+
+
+**How does this fit together?**
+Rasa Core's job is to choose the right action to execute at each step
+of the conversation. Simple actions are just sending a message to a user.
+These simple actions are the ``actions`` in the domain, which start
+with ``utter_``. They will just respond with a message based on a template
+from the ``templates`` section. See :ref:`customactions` for how to build
+more interesting actions.
+
+
+
+7. Train a Dialogue Model
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The next step is to train a neural network on our example stories.
+To do this, run the command below. If you are running this on your machine,
+leave out the ``!`` at the start. This command will call the Rasa Core train
+function, pass domain and stories files to it and store the trained model
+into the ``models/dialogue`` directory. The output of this command will include
+the training results for each training epoch.
+
+.. runnable::
+   :description: core-train-core
+
+   !python -m rasa_core.train -d domain.yml -s stories.md -o models/dialogue
+
+   print("Finished training! You can move on to the next step!")
+
+
+8. Talk To Your Bot
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Now that we've added an NLU model, you can talk to your bot using natural language,
-rather than typing in structured input. Let's start up your full bot, including
-both Rasa Core and Rasa NLU models!
+And that's it! You now have everything you need to start interacting with your bot!
+Let's start up your full bot, including both Rasa Core and Rasa NLU models using
+the commands below!
 
 If you are running these commands locally, run:
 
