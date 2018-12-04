@@ -8,7 +8,9 @@ Quickstart
 
 This tutorial will show you the different parts needed to build a bot.
 You can run the code directly here in the documentation, without
-installing anything, or you can install Rasa Core and run the examples on your local machine! If you would like to run this locally, go to the :ref:`installation` first to install the Rasa Core.
+installing anything, or you can install Rasa Core and run the examples on your 
+local machine! If you would like to run this locally, go to the :ref:`get_started_step3` 
+first to install the Rasa Core.
 
 .. contents:: The tutorial will include the following steps:
 	
@@ -30,8 +32,8 @@ Teaching the bot to understand user inputs using Rasa NLU
 
 You will start by teaching your assistant to understand your messages first.
 For that, you will train the NLU model which will take your inputs in a simple
-text format and extract structured data. This structured data, called intents, will help the bot
-understand your message.
+text format and extract structured data. This structured data, called intents, 
+will help the bot understand your message.
 
 The first thing you will do is define the user messages your bot should
 understand. You will achieve this by defining the intents and providing a few
@@ -106,11 +108,13 @@ and save it in a file called ``stories.md``.:
 2. Define the NLU model configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Next, you will define the NLU model configuration which will define how the NLU model will be trained
-and how the features from the text inputs will be extracted. In this example, you will use a predefined
-``tensorflow_embedding`` pipeline which you can learn more about here.
+Next, you will define the NLU model configuration which will define how the NLU 
+model will be trained and how the features from the text inputs will be extracted.
+In this example, you will use a predefined ``tensorflow_embedding`` pipeline which
+you can learn more about `here <https://rasa.com/docs/nlu/choosing_pipeline/>`_.
 
-The code block below will save the NLU model configuration to the file called ``nlu_config.yml``.
+The code block below will save the NLU model configuration to the file called 
+``nlu_config.yml``.
 
 .. runnable::
    :description: core-write-nlu-config
@@ -126,9 +130,9 @@ The code block below will save the NLU model configuration to the file called ``
    
 3. Train the NLU model 
 ^^^^^^^^^^^^^^^^^^^^^^
-Now you have all the components needed to train the NLU model. Run the cell below which will call the
-rasa.nlu model, pass the previously defined ``nlu.md`` and ``nlu_config.yml`` files and save the model inside the
-``models/current/nlu`` directory.
+Now you have all the components needed to train the NLU model. Run the cell below
+which will call the rasa.nlu model, pass the previously defined ``nlu.md`` and 
+``nlu_config.yml`` files and save the model inside the ``models/current/nlu`` directory.
 
 .. runnable::
    :description: core-train-nlu
@@ -140,9 +144,10 @@ rasa.nlu model, pass the previously defined ``nlu.md`` and ``nlu_config.yml`` fi
    
 4. Test the model
 ^^^^^^^^^^^^^^^^^
-Now, you can test the model to see if the bot can understand you. The code block below
-will load the model which you just trained and return the intent classification results
-for the message ``Hello``. You can test it on different messages as well, simply change ``Hello`` string with the input you would like to test the model on!:
+Now, you can test the model to see if the bot can understand you. The code block
+below will load the model which you just trained and return the intent classification
+results for the message ``Hello``. You can test it on different messages as well,
+simply change ``Hello`` string with the input you would like to test the model on:
 
 .. runnable::
    :description: core-test-nlu
@@ -172,9 +177,9 @@ conversation.
 Rasa Core model will have to learn from real conversational data so this is the
 step you will take next. You will define some training stories which will be used
 to train the model. A story is a real conversation between the user and a bot where
-user inputs are expressed as intents while the responses of the bot are expressed as
-action names. Below is an example of a simple conversation, the user says hello to our
-bot, and the bot says hello back. This is how it looks as a story:
+user inputs are expressed as intents while the responses of the bot are expressed
+as action names. Below is an example of a simple conversation, the user says hello
+to our bot, and the bot says hello back. This is how it looks as a story:
 
 .. code-block:: story
 
@@ -329,8 +334,8 @@ the training results for each training epoch.
 ^^^^^^^^^^^^^^^^^^^^^^
 
 And that's it! You now have everything you need to start interacting with you bot!
-Let's start up your full bot, including both Rasa Core and Rasa NLU models using the
-commands below!
+Let's start up your full bot, including both Rasa Core and Rasa NLU models using
+the commands below!
 
 If you are running these commands locally, run:
 
