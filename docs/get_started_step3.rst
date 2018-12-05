@@ -15,16 +15,23 @@ Step 3: Start Building
    </ul>
    </div>
 
-Now it is time to build the first AI assistant yourself. If you have installed the Rasa Stack already in the step before, head to the Starterpack  - otherwise, follow the instructions here:
+Now it's time to build the first AI assistant yourself.
+
+a) **Install the Rasa Stack on your machine** (if you haven't done that already)
+b) **Get the Starter Pack**
+
+.. raw:: html
+
+     If you have any questions, you can ask <a class="reference external" onclick="WebChat.open()">Sara</a>, the Rasa bot, or visit our <a class="reference external" href="https://forum.rasa.com" target="_blank">Community Forum</a>.
 
 
 
 
 
-Install the Rasa Stack on your machine
+a) Install the Rasa Stack on your machine
 --------------------------------------
 
-The recommended way to install the Rasa Stack is using pip (make sure to install both libraries Core and NLU):
+The recommended way to install the Rasa Stack is using pip (make sure to install both Core and NLU):
 
 .. copyable::
 
@@ -48,17 +55,16 @@ The recommended way to install the Rasa Stack is using pip (make sure to install
 
 |
 
-
 .. raw:: html
 
      Unless you've already got numpy & scipy installed, we highly recommend that you install and use <a class="reference external" href="https://www.anaconda.com/download/" target="_blank">Anaconda</a>.
 
-Get the Starter Pack!
+b) Get the Starter Pack
 ---------------------
 
 .. raw:: html
 
-     We have prepared a <a class="reference external" href="https://github.com/RasaHQ/starter-pack-rasa-stack" target="_blank">Starter Pack</a> which has all the files you need to build your first custom AI assistant and a training data set. Also, this <a class="reference external" href="https://www.youtube.com/watch?v=lQZ_x0LRUbI&t=1s" target="_blank">YouTube tutorial</a> walks you through all the steps.
+     We've prepared a <a class="reference external" href="https://github.com/RasaHQ/starter-pack-rasa-stack" target="_blank">Starter Pack</a> which has all the files you need to build your first custom AI assistant and a training data set. Also, this <a class="reference external" href="https://www.youtube.com/watch?v=lQZ_x0LRUbI&t=1s" target="_blank">YouTube tutorial</a> walks you through all the steps.
 
 .. copyable::
 

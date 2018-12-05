@@ -3,18 +3,18 @@
 Quickstart
 ==========
 
-.. start-shared-content 
+.. start-shared-content
 
 
 This tutorial will show you the different parts needed to build a bot.
 You can run the code directly here in the documentation without
-installing anything, or you can install Rasa Core and run the examples on your 
+installing anything, or you can install Rasa Core and run the examples on your
 local machine! If you would like to run this locally, go to the :ref:`get_started_step3`
-first to install the Rasa Core.
+first to install the Rasa Stack.
 
 .. contents:: The tutorial will include the following steps:
-	
-	
+
+
 Goal
 ----
 You will build a friendly chatbot which will ask you how you're doing
@@ -31,7 +31,7 @@ Teaching the bot to understand user inputs using Rasa NLU
 
 You will start by teaching your assistant to understand your messages first.
 For that, you will train the NLU model which will take your inputs in a simple
-text format and extract structured data. This structured data, called intents, 
+text format and extract structured data. This structured data, called intents,
 will help the bot understand your message.
 
 The first thing you will do is define the user messages your bot should
@@ -124,10 +124,10 @@ The code block below will save the NLU model configuration to the file called
    """
    %store nlu_config > nlu_config.yml
 
-   print("The configuration has been successfully stored inside the nlu_config.yml file. You can now move on to the next step!")   
-   
-   
-3. Train the NLU model 
+   print("The configuration has been successfully stored inside the nlu_config.yml file. You can now move on to the next step!")
+
+
+3. Train the NLU model
 ^^^^^^^^^^^^^^^^^^^^^^
 Now you have all the components needed to train the NLU model. Run the cell below
 which will call the rasa.nlu model, pass the previously defined ``nlu.md`` and
@@ -137,10 +137,10 @@ which will call the rasa.nlu model, pass the previously defined ``nlu.md`` and
    :description: core-train-nlu
 
    !python -m rasa_nlu.train -c nlu_config.yml --data nlu.md -o models --fixed_model_name nlu --project current --verbose
-   
-   print("The NLU model has been trained successfully! You can move to the next step!")   
-   
-   
+
+   print("The NLU model has been trained successfully! You can move to the next step!")
+
+
 4. Test the model
 ^^^^^^^^^^^^^^^^^
 Now, you can test the model to see if the bot can understand you. The code block
@@ -150,14 +150,14 @@ by editing the ``Hello`` string:
 
 .. runnable::
    :description: core-test-nlu
-   
+
    from rasa_nlu.model import Metadata, Interpreter
    import json
-   
+
    def pprint(o):
     # small helper to make dict dumps a bit prettier
        print(json.dumps(o, indent=2))
-   
+
    interpreter = Interpreter.load('./models/current/nlu')
    print(interpreter.parse(u"Hello"))
 
@@ -238,9 +238,9 @@ Run the cell below to save the example stories inside the file called 'stories.m
 ^^^^^^^^^^^^^^^^^^
 
 The next thing we need to do is define a ``Domain``.
-The domain defines the universe your bot lives in - what user inputs it 
-should expect to get, what actions it should be able to predict, how to 
-respond and what information to store.  
+The domain defines the universe your bot lives in - what user inputs it
+should expect to get, what actions it should be able to predict, how to
+respond and what information to store.
 Here is an example domain for our bot which you'll write to a
 file called ``domain.yml``:
 
@@ -385,7 +385,7 @@ Why not play around with the code above?
 2. Add some more stories to provide more examples of how your bot should behave. Then retrain the Rasa Core model to try it!
 3. Edit the response templates in the domain, retrain your model and see the results!
 
-.. end-shared-content 
+.. end-shared-content
 
 There is a lot more you can do with Rasa Core, so go and read the sections
 in the User Guide next.
@@ -438,7 +438,5 @@ this:
        - title: "super sad"
          payload: "super sad"
 
-		
+
 .. include:: feedback.inc
-
-
