@@ -1,3 +1,4 @@
+:webchat_payload: /get_started_step1
 .. _get_started_step1:
 
 Step 1: Understand the Rasa Stack
