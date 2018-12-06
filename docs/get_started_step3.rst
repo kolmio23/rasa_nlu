@@ -6,12 +6,12 @@ Step 3: Start Building
 
 .. raw:: html
 
-   <div class="progress">
+  <div class="progress">
    <ul>
-   <li>1</li>
-   <li>2</li>
+   <li><a href="../get_started_step1/">1</a></li>
+   <li><a href="../get_started_step2/">2</a></li>
    <li class="current">3</li>
-   <li>4</li>
+   <li><a href="../get_started_step4/">4</a></li>
    </ul>
    </div>
 
