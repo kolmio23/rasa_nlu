@@ -33,32 +33,27 @@ Step 4: Join the Community
      <div class="github-button" style="display:inline-block;margin-right:24px;"><h3 style="margin-top:0">Rasa NLU</h3> <a class="github-button" href="https://github.com/RasaHQ/rasa_nlu" data-size="large" data-show-count="true" aria-label="Star RasaHQ/rasa_nlu on GitHub">Star</a></div>
      <div class="github-button" style="display:inline-block;"><h3 style="margin-top:0">Rasa Core</h3> <a class="github-button" href="https://github.com/RasaHQ/rasa_core" data-size="large" data-show-count="true" aria-label="Star RasaHQ/rasa_nlu on GitHub">Star</a></div>
      </div>
-
-.. div::columns
   
-   Why join the Forum?
-   ^^^^^^^^^^^^^^^^^^^^
+Why join the Forum?
+^^^^^^^^^^^^^^^^^^^
 
-   * Get help and find the answers to your questions
-   * Ask the Rasa's maintainers questions
-   * Stay up to date on product updates, events and resources
+* Get help and find the answers to your questions
+* Ask the Rasa's maintainers questions
+* Stay up to date on product updates, events and resources
 
+.. button::
+    :link: https://forum.rasa.com/
+    :text: Join the Forum
+    :newtab:
 
-    .. button::
-        :link: https://forum.rasa.com/
-        :text: Join the Forum
-        :newtab:
+Why engage on Github?
+^^^^^^^^^^^^^^^^^^^^^
 
-  |
-  
-    Why engage on Github?
-    ^^^^^^^^^^^^^^^^^^^^
+* Explore the source code in depth
+* Check out issues and help solve them
+* Contribute to open source software
 
-    * Explore the source code in depth
-    * Check out issues and help solve them
-    * Contribute to open source software
-
-    .. button::
-        :link: https://github.com/RasaHQ
-        :text: Check out Github
-        :newtab:
+.. button::
+    :link: https://github.com/RasaHQ
+    :text: Check out Github
+    :newtab:
