@@ -8,10 +8,10 @@ Step 3: Start Building
 
   <div class="progress">
    <ul>
-   <li><a href="https://rasa.com/docs/get_started_step1/">1</a></li>
-   <li><a href="https://rasa.com/docs/get_started_step2/">2</a></li>
+   <li><a href="../get_started_step1/">1</a></li>
+   <li><a href="../get_started_step2/">2</a></li>
    <li class="current">3</li>
-   <li><a href="https://rasa.com/docs/get_started_step4/">4</a></li>
+   <li><a href="../get_started_step4/">4</a></li>
    </ul>
    </div>
 

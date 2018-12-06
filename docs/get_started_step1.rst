@@ -8,9 +8,9 @@ Step 1: Understand the Rasa Stack
    <div class="progress">
    <ul>
    <li class="current">1</li>
-   <li><a href="https://rasa.com/docs/get_started_step2/">2</a></li>
-   <li><a href="https://rasa.com/docs/get_started_step3/">3</a></li>
-   <li><a href="https://rasa.com/docs/get_started_step4/">4</a></li>
+   <li><a href="../get_started_step2/">2</a></li>
+   <li><a href="../get_started_step3/">3</a></li>
+   <li><a href="../get_started_step4/">4</a></li>
    </ul>
    </div>
 
