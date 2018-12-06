@@ -4,7 +4,7 @@
 .. _ibm-watson-to-rasa:
 
 Rasa as open source alternative to IBM Watson - Migration Tips
-==================================================
+==============================================================
 
 At Rasa, we hear a few different reasons why developers switch from cloud-based tools like IBM Watson:
 

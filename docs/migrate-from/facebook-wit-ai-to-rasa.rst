@@ -4,7 +4,7 @@
 .. _facebook-wit-ai-to-rasa:
 
 Rasa as open source alternative to Facebook's Wit.ai - Migration Guide
-==================================================
+======================================================================
 
 This guide shows you how to migrate your application built with Facebook's Wit.ai to Rasa. Here are a few reasons why we see developers switching:
 
@@ -22,7 +22,7 @@ Let's get started with migrating your application from Wit.ai to Rasa:
 
 
 Step 1: Export your Training Data from Wit.ai
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Navigate to your app's setting page by clicking the **Settings** icon in the upper right corner. Scroll down to **Export your data** and hit the button **Download .zip with your data**.
 

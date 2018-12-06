@@ -3,7 +3,7 @@
 .. _google-dialogflow-to-rasa:
 
 Rasa as open source alternative to Google Dialogflow - Migration Guide
-=====================================================
+======================================================================
 
 This guide shows you how to migrate your application built with Google Dialogflow to Rasa. Here are a few reasons why we see developers switching:
 

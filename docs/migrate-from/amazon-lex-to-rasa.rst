@@ -4,7 +4,7 @@
 .. _amazon-lex-to-rasa:
 
 Rasa as Open Source Alternative to Amazon Lex - Migration Tips
-==================================================
+==============================================================
 
 At Rasa, we hear a few different reasons why developers switch from cloud-based tools like Amazon Lex:
 

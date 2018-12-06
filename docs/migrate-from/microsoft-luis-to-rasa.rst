@@ -4,7 +4,7 @@
 .. _microsoft-luis-to-rasa:
 
 Rasa as open source alternative to Microsoft LUIS - Migration Guide
-==================================================
+===================================================================
 
 This guide shows you how to migrate your application built with Microsoft LUIS to Rasa. Here are a few reasons why we see developers switching:
 
