@@ -159,7 +159,7 @@ by editing the ``Hello`` string:
        print(json.dumps(o, indent=2))
 
    interpreter = Interpreter.load('./models/current/nlu')
-   print(interpreter.parse(u"Hello"))
+   pprint(interpreter.parse(u"Hello"))
 
 
 Teaching the bot to respond using Rasa Core
