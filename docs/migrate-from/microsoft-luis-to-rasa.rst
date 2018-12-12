@@ -1,22 +1,30 @@
 
 :desc: Migrating from Microsoft LUIS to Rasa
 
-.. _luis:
+.. _microsoft-luis-to-rasa:
 
-Rasa: An Open Source Alternative to Microsoft LUIS
-==================================================
+Rasa as open source alternative to Microsoft LUIS - Migration Guide
+===================================================================
 
-If you have an application built with Microsoft LUIS and made a decision to migrate it to a
-free and fully customizable solution Rasa Stack, check out the guide below on how to migrate your application from
-LUIS to Rasa.
+This guide shows you how to migrate your application built with Microsoft LUIS to Rasa. Here are a few reasons why we see developers switching:
 
-Migration from LUIS consists of just a few simple steps. Here's how you do it:
+* **Faster**: Runs locally - no https requests and server round trips required
+* **Customizable**: Tune models and get higher accuracy with your data set
+* **Open source**: No risk of vendor lock-in - the Rasa Stack comes with an Apache 2.0 licence and you can use it commercial projects
+
+
+.. raw:: html
+
+     In addition, our open source tools allow developers to build contextual AI assistants and manage dialogues with machine learning instead of rules - learn more in <a class="reference external" href="http://blog.rasa.com/a-new-approach-to-conversational-software/" target="_blank">this blog post</a>.
+
+
+Let's get started with migrating your application from LUIS to Rasa:
 
 
 Step 1: Export your Training Data from LUIS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Go to your list of `LUIS applications <https://www.luis.ai/applications>`_ and click 
+Go to your list of `LUIS applications <https://www.luis.ai/applications>`_ and click
 on the three dots menu next to the app you want to export.
 
 .. image:: ../_static/images/luis_export.png
@@ -34,8 +42,8 @@ Follow the instructions in the `NLU Quickstart <https://rasa.com/docs/nlu/quicks
 Step 3: Modify your app to call your Rasa NLU Server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Your existing application will have some code to make API requests to LUIS. 
-Modify the API url to point to your Rasa NLU server. 
+Your existing application will have some code to make API requests to LUIS.
+Modify the API url to point to your Rasa NLU server.
 If you are testing this on your development machine, that will be at ``http://localhost:5000``
 When you start the Rasa NLU server, you can also pass an ``emulate`` argument:
 
@@ -50,10 +58,10 @@ Terminology:
 ^^^^^^^^^^^^
 
 The words ``intent``, ``entity``, and ``utterance`` have the same meaning in Rasa as they do
-in LUIS. 
+in LUIS.
 LUIS's ``patterns`` feature is very similar to Rasa NLU's `regex features </docs/nlu/dataformat/>`_
 LUIS's ``phrase lists`` feature does not currently have an equivalent in Rasa NLU.
 
-If you have migrated your LUIS application to Rasa, join the `Rasa Community Forum <https://forum.rasa.com/>`_ and share your experience with us! 
+|
 
-
+Join the `Rasa Community Forum <https://forum.rasa.com/>`_ and let us know how your migration went!
