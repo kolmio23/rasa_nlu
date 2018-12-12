@@ -6,6 +6,11 @@
 Rasa as open source alternative to IBM Watson - Migration Tips
 ==============================================================
 
+.. raw:: html
+
+     There is no support for IBM Watson yet. However, a group of community members is working on a way to use <a class="reference external" href="https://console.bluemix.net/docs/services/conversation/configure-workspace.html#exporting-and-copying-workspaces" target="_blank">exported IBM Watson workspaces</a> in Rasa. If you're interested in that, check out our <a class="reference external" href="https://forum.rasa.com/" target="_blank">Community Forum</a>.
+
+
 At Rasa, we hear a few different reasons why developers switch from cloud-based tools like IBM Watson:
 
 * **Faster**: Runs locally - no https requests and server round trips required
@@ -16,13 +21,6 @@ At Rasa, we hear a few different reasons why developers switch from cloud-based 
 .. raw:: html
 
      In addition, our open source tools allow developers to build contextual AI assistants and manage dialogues with machine learning instead of rules - learn more in <a class="reference external" href="http://blog.rasa.com/a-new-approach-to-conversational-software/" target="_blank">this blog post</a>.
-
-|
-
-.. raw:: html
-
-     There is no support for IBM Watson yet. However, a group of community members is working on a way to use <a class="reference external" href="https://console.bluemix.net/docs/services/conversation/configure-workspace.html#exporting-and-copying-workspaces" target="_blank">exported IBM Watson workspaces</a> in Rasa. If you're interested in that, check out our <a class="reference external" href="https://forum.rasa.com/" target="_blank">Community Forum</a>.
-
 |
 
 .. button::
