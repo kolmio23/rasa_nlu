@@ -3,6 +3,19 @@
 What's New?
 ===========
 
+November 2018
+~~~~~~~~~~~~~
+
+Major release of Rasa Core (0.12) which brings a lot of new functionality:
+
+- Vastly improved `slot filling <https://rasa.com/docs/core/slotfilling/>`_ through the new ``Forms``. You can now separate out business logic from learned behavior.
+- A `new <https://rasa.com/docs/core/interactive_learning/#visualization-of-conversations>`_ interactive learning experience which renders a dynamically updated graph to the web browser.
+- `End-to-end <https://rasa.com/docs/core/evaluation/#end-to-end-evaluation-of-rasa-nlu-and-core>`_ evaluation of Rasa NLU and Core models together.
+
+New interactive learning feature in Rasa Platform. 
+Jump from any point in a user conversation into interactive learning, providing corrections to the bot's actions
+and taking over as the user.
+
 October 2018
 ~~~~~~~~~~~~
 
