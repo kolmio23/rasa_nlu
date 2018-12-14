@@ -80,5 +80,5 @@ Been here before?
    FAQ <faq>
    What's New <updates>
    YouTube Channel <youtube_channel>
-   Demo Bot <demobot>
+   Demo Bot (alpha) <demobot>
    Contributing <contributing>

@@ -1,26 +1,53 @@
 .. _demobot:
 
-The Rasa Demo Bot
-=================
+Say hi to Sara - our Rasa Demo Bot! (alpha)
+===========================================
 
-Welcome to the Rasa Demo Bot! You can try it by clicking on the bubble in the
-bottom right corner. We built this to show you an example of a bot built with
-Rasa. Since our libraries are open source, we decided to make the code for this
-bot public too. You can find the code for the bot `here <https://github.com/RasaHQ/rasa-demo>`_.
-This bot showcases how to use:
+.. image:: ../_static/images/sara-mascot.png
+   :width: 15%
+   :alt: Sara - The Rasa Demo Bot
 
-- a combination of Rasa NLU + Rasa Core + Duckling
-- webchat on a website
+|
+.. raw:: html
 
-The current release is an alpha version, meaning for now it only has a few
-goals and not a very large dataset. We strongly believe that to build a real
-bot you need to learn from real data and so we decided to throw the bot out
-there while it’s still not perfect. The more you chat with it, the better it
-becomes. This doesn’t mean we’re using some fancy reinforcement learning
-algorithms, but we’ll be looking at the conversations and improving the
-bot based on them with the help of our `Rasa Platform <https://rasa.com/products/rasa-platform/>`_.
-In the future we will be adding more user goals dependent on the kind of
-requests we get from you.
+   <b>Sara</b> currently helps developers getting started with our docs - her code and training data are open source (repo <a class="reference external" href="https://github.com/RasaHQ/rasa-demo" target="_blank">here</a>) to show the inner workings of a <a class="reference external" href="http://blog.rasa.com/level-3-contextual-assistants-beyond-answering-simple-questions/" target="_blank">contextual AI assistants</a>.
+   <br>
+   <br>
 
-Thanks for testing the bot! If you’d like to give us feedback or raise any
-bugs/issues with it, feel free to do so in the `repo <https://github.com/RasaHQ/rasa-demo>`_.
+.. button::
+   :link: ../get_started_step1/
+   :text: Talk to Sara
+
+
+Why we built Sara
+^^^^^^^^^^^^^^^^^
+
+
+Contextual AI assistants are still early days and building one is not always easy. That's why we `open sourced <https://github.com/RasaHQ/rasa-demo>`_ a full example.
+Sara showcases a few different features of the Rasa Stack:
+
+- Using Rasa Core and NLU to handle contextual conversations
+- Extracting entities with a CRF and Duckling
+- Slot filling and form actions
+- Training word vectors from scratch with the embeddings pipeline
+- Generalising conversations with Rasa Core
+- Connecting Rasa to a webchat on a website
+
+
+Why Sara doesn't understand everything you say
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The current release is an alpha version, meaning for now she only supports a few user
+goals and has a small dataset. We strongly believe that to build a great contextual AI assistant
+you need to learn from real data and so we decided to throw Sara out
+there while she's still not perfect.
+
+The more you chat with her, the better she
+becomes. Internally, we use `Rasa Platform <https://rasa.com/products/rasa-platform/>`_ to analyse conversations and improve Sara every day.
+
+
+How you can help
+^^^^^^^^^^^^^^^^
+Simply by `talking to her <https://rasa.com/docs/get_started_step1/>`_!
+If you’d like to give us feedback or raise any
+bugs/issues, feel free to do so in the `repo <https://github.com/RasaHQ/rasa-demo>`_.
