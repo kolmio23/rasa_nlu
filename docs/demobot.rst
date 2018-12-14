@@ -29,7 +29,7 @@ Sara showcases a few different features of the Rasa Stack:
 - Using Rasa Core and NLU to handle contextual conversations
 - Extracting entities with a CRF and Duckling
 - Slot filling and form actions
-- Training word vectors from scratch with the embeddings pipeline
+- Training word vectors from scratch with the tensorflow_embedding pipeline
 - Generalising conversations with Rasa Core
 - Connecting Rasa to a webchat on a website
 
