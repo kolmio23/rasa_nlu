@@ -10,7 +10,7 @@ This guide shows you how to migrate your application built with Microsoft LUIS t
 
 * **Faster**: Runs locally - no https requests and server round trips required
 * **Customizable**: Tune models and get higher accuracy with your data set
-* **Open source**: No risk of vendor lock-in - the Rasa Stack comes with an Apache 2.0 licence and you can use it commercial projects
+* **Open source**: No risk of vendor lock-in - the Rasa Stack comes with an Apache 2.0 licence and you can use it in commercial projects
 
 
 .. raw:: html
