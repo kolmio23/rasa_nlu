@@ -9,15 +9,22 @@ This guide shows you how to migrate your application built with Google Dialogflo
 
 * **Faster**: Runs locally - no https requests and server round trips required
 * **Customizable**: Tune models and get higher accuracy with your data set
-* **Open source**: No risk of vendor lock-in - the Rasa Stack comes with an Apache 2.0 licence and you can use it commercial projects
+* **Open source**: No risk of vendor lock-in - the Rasa Stack comes with an Apache 2.0 licence and you can use it in commercial projects
 
 
 .. raw:: html
 
      In addition, our open source tools allow developers to build contextual AI assistants and manage dialogues with machine learning instead of rules - learn more in <a class="reference external" href="http://blog.rasa.com/a-new-approach-to-conversational-software/" target="_blank">this blog post</a>.
+     <br>
+     <br>
+
+.. raw:: html
+
+     Let's get started with migrating your application from Dialogflow to Rasa (you can find a more detailed tutorial <a class="reference external" href="http://blog.rasa.com/how-to-migrate-your-existing-google-dialogflow-assistant-to-rasa/" target="_blank">here</a>):
 
 
-Let's get started with migrating your application from Dialogflow to Rasa:
+
+
 
 Step 1: Export your data from Dialogflow
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
