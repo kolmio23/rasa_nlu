@@ -39,8 +39,8 @@ NLU and Core are independent. You can use NLU without Core, and vice versa. We r
 **Lets start with an example.** Imagine you've built an AI assistant that sells renters insurance. At the end, you ask your user `Which email shall I send the confirmation to?` and they respond with `Please send the confirmation to amy@example.com`. Now it is time for the Rasa Stack to get to work:
 
 
-.. image:: ../_static/images/rasa_stack_explained.png
-   :width: 90%
+.. image:: https://rasa.com/assets/img/rasa-ecosystem.png
+   :width: 70%
    :alt: rasa stack
 
 1. **NLU** understands the user's message based on your previous training data:
