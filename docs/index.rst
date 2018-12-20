@@ -62,10 +62,13 @@ Been here before?
 .. toctree::
    :maxdepth: 1
    :hidden:
-   :caption: Migrating from
+   :caption: Migration (beta)
 
-   Google Dialogflow <dialogflow>
-   Microsoft LUIS <luis>
+   Google Dialogflow <migrate-from/google-dialogflow-to-rasa>
+   Microsoft LUIS <migrate-from/microsoft-luis-to-rasa>
+   Facebook's Wit.ai <migrate-from/facebook-wit-ai-to-rasa>
+   IBM Watson <migrate-from/ibm-watson-to-rasa>
+   Amazon Lex <migrate-from/amazon-lex-to-rasa>
 
 .. toctree::
    :maxdepth: 1
@@ -77,5 +80,5 @@ Been here before?
    FAQ <faq>
    What's New <updates>
    YouTube Channel <youtube_channel>
-   Demo Bot <demobot>
+   Demo Bot (alpha) <demobot>
    Contributing <contributing>

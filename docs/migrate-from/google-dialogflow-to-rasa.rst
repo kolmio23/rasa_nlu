@@ -1,15 +1,29 @@
 :desc: Migrating from Google Dialogflow to Rasa
 
-.. _dialogflow:
+.. _google-dialogflow-to-rasa:
 
-Rasa: An Open Source alternative to Google Dialogflow
-=====================================================
+Rasa as open source alternative to Google Dialogflow - Migration Guide
+======================================================================
 
-If you have an application built with Google Dialogflow and made a decision to migrate it to a
-free and fully customizable solution Rasa Stack, check out the guide below on how to migrate the
-Google Dialogflow application to Rasa.
+This guide shows you how to migrate your application built with Google Dialogflow to Rasa. Here are a few reasons why we see developers switching:
 
-Migration from Google Dialogflow consists of just a few simple steps. Here's how you do it:
+* **Faster**: Runs locally - no https requests and server round trips required
+* **Customizable**: Tune models and get higher accuracy with your data set
+* **Open source**: No risk of vendor lock-in - the Rasa Stack comes with an Apache 2.0 licence and you can use it in commercial projects
+
+
+.. raw:: html
+
+     In addition, our open source tools allow developers to build contextual AI assistants and manage dialogues with machine learning instead of rules - learn more in <a class="reference external" href="http://blog.rasa.com/a-new-approach-to-conversational-software/" target="_blank">this blog post</a>.
+     <br>
+     <br>
+
+.. raw:: html
+
+     Let's get started with migrating your application from Dialogflow to Rasa (you can find a more detailed tutorial <a class="reference external" href="http://blog.rasa.com/how-to-migrate-your-existing-google-dialogflow-assistant-to-rasa/" target="_blank">here</a>):
+
+
+
 
 
 Step 1: Export your data from Dialogflow
@@ -45,8 +59,8 @@ If your unzipped folder is called ``testagent``, the command would be:
 Step 3: Modify your app to call your Rasa NLU Server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Your existing application will have some code to make API requests to Dialogflow. 
-Modify the API url to point to your Rasa NLU server. 
+Your existing application will have some code to make API requests to Dialogflow.
+Modify the API url to point to your Rasa NLU server.
 If you are testing this on your development machine, that will be at ``http://localhost:5000``
 When you start the Rasa NLU server, you can also pass an ``emulate`` argument:
 
@@ -66,5 +80,6 @@ In Dialogflow, there is a concept called ``Fulfillment``. In Rasa we call this a
 
 Dialogflow also has a Small Talk module. One of our awesome contributors has made a Rasa compatible version of this `here <https://github.com/rahul051296/small-talk-rasa-stack>`_.
 
-If you have migrated your Google Dialogflow application to Rasa, join the `Rasa Community Forum <https://forum.rasa.com/>`_ and share your experience with us! 
+|
 
+Join the `Rasa Community Forum <https://forum.rasa.com/>`_ and let us know how your migration went!

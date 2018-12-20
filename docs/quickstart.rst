@@ -8,8 +8,8 @@ Quickstart
 
 This tutorial will show you the different parts needed to build a bot.
 You can run the code directly here in the documentation without
-installing anything, or you can install Rasa Core and run the examples on your
-local machine! If you would like to run this locally, go to the :ref:`get_started_step3`
+installing anything, or you can install Rasa Core and run the examples in a Jupyter notebook
+on your local machine! If you would like to run this locally, go to the :ref:`get_started_step3`
 first to install the Rasa Stack.
 
 .. contents:: The tutorial will include the following steps:
@@ -39,9 +39,7 @@ understand. You will achieve this by defining the intents and providing a few
 ways users might express them.
 
 Run the code cell below to save the Rasa NLU training examples to the file
-``nlu.md``. If you are running locally,
-copy the text between the triple quotes (``"""``)
-and save it in a file called ``nlu.md``.:
+``nlu.md``:
 
 
 .. runnable::
@@ -159,7 +157,7 @@ by editing the ``Hello`` string:
        print(json.dumps(o, indent=2))
 
    interpreter = Interpreter.load('./models/current/nlu')
-   print(interpreter.parse(u"Hello"))
+   pprint(interpreter.parse(u"Hello"))
 
 
 Teaching the bot to respond using Rasa Core
@@ -313,8 +311,7 @@ more interesting actions.
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The next step is to train a neural network on our example stories.
-To do this, run the command below. If you are running this on your machine,
-leave out the ``!`` at the start. This command will call the Rasa Core train
+To do this, run the command below. This command will call the Rasa Core train
 function, pass domain and stories files to it and store the trained model
 into the ``models/dialogue`` directory. The output of this command will include
 the training results for each training epoch.
@@ -333,15 +330,6 @@ the training results for each training epoch.
 And that's it! You now have everything you need to start interacting with your bot!
 Let's start up your full bot, including both Rasa Core and Rasa NLU models using
 the commands below!
-
-If you are running these commands locally, run:
-
-.. code-block:: bash
-
-   python -m rasa_core.run -d models/dialogue -u models/current/nlu
-
-If you are running the cells here in the docs, run this cell:
-
 
 **This will not work if you haven't run the cells above!**
 
