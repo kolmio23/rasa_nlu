@@ -8,7 +8,6 @@ We've put together a "Get Started" guide for you that explains our open source t
 .. button::
    :link: ./get_started_step1/
    :text: Get Started with the Rasa Stack
-   :newtab:
 
 Been here before?
 ^^^^^^^^^^^^^^^^^
