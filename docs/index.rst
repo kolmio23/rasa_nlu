@@ -1,8 +1,7 @@
 Build contextual chatbots and AI assistants with our open source conversational AI framework
 ============================================================================================
 
-Rasa is the leading open source machine learning toolkit that lets developers expand chatbots beyond answering simple questions. The open source Rasa
-Stack enables developers all over the world to build in-house conversational AI without hiring big research teams. 
+Rasa is the leading open source machine learning toolkit that lets developers expand chatbots beyond answering simple questions. The open source Rasa Stack enables developers all over the world to build in-house conversational AI without hiring big research teams. 
 
 New to Rasa?
 ^^^^^^^^^^^^
