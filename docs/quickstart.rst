@@ -166,8 +166,8 @@ Teaching the bot to respond using Rasa Core
 5. Write Stories
 ^^^^^^^^^^^^^^^^
 
-At this stage, you will teach your chatbot to respond to your messages using Rasa Core
-for that, you will use Rasa Core. Rasa Core will train the dialogue management
+At this stage, you will teach your chatbot to respond to your messages using Rasa Core.
+Rasa Core will train the dialogue management
 model and predict how the bot should respond at the specific state of the
 conversation.
 
@@ -302,7 +302,7 @@ Rasa Core's job is to choose the right action to execute at each step
 of the conversation. Simple actions are just sending a message to a user.
 These simple actions are the ``actions`` in the domain, which start
 with ``utter_``. They will just respond with a message based on a template
-from the ``templates`` section. See :ref:`customactions` for how to build
+from the ``templates`` section. See `Custom Actions <https://rasa.com/docs/core/customactions/>`_ for how to build
 more interesting actions.
 
 
