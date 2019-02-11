@@ -1,4 +1,4 @@
-:desc: Migrating from Google Dialogflow to Rasa
+:desc: Open source alternative to Google Dialogflow for conversational bots and NLP
 
 .. _google-dialogflow-to-rasa:
 

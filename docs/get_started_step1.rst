@@ -1,3 +1,5 @@
+:desc: Get started with Rasa Stack, an set of open source machine learning libraries for developers to create contextual AI Assistants and chatbots.
+
 :webchat_payload: /get_started_step1
 .. _get_started_step1:
 

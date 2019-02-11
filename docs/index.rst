@@ -1,3 +1,5 @@
+:desc: Documentation on Rasa Stack, a open source library for nlp and machine learning based dialogue management. Use the chatbot framework to build contextual assistants. 
+
 Build contextual chatbots and AI assistants with our open source conversational AI framework
 ============================================================================================
 

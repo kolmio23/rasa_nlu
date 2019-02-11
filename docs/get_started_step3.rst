@@ -1,3 +1,5 @@
+:desc: Get the starter-pack and build your first conversational assistant using the open source framework Rasa Stack.
+
 :webchat_payload: /get_started_step3
 .. _get_started_step3:
 

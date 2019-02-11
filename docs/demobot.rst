@@ -1,3 +1,5 @@
+:desc: Test a Rasa-powered open source chatbot for familiarising with the Rasa Stack and testing how an assistant built with Rasa framework works in action.
+
 .. _demobot:
 
 Say hi to Sara - our Rasa Demo Bot! (alpha)

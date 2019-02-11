@@ -1,3 +1,5 @@
+:desc: A step-by-step tutorial on how to get started with the Rasa conversational AI framework for building contextual AI assistants.
+
 :webchat_payload: /get_started_step2
 .. _get_started_step2:
 

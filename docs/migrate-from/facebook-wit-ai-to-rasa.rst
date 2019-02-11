@@ -1,5 +1,5 @@
 
-:desc: Migrating from Facebook's Wit.ai to Rasa
+:desc: Open source alternative to Facebooks Wit.ai for conversational bots and NLP
 
 .. _facebook-wit-ai-to-rasa:
 

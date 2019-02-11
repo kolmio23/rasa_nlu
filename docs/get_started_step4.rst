@@ -1,3 +1,5 @@
+:desc: Join Rasa Community for answers to questions about our open source bot framework and stay up-to date on product and resource updates. 
+
 :webchat_payload: /get_started_step4
 .. _get_started_step4:
 
@@ -33,7 +35,7 @@ Step 4: Join the Community
      <div class="github-button" style="display:inline-block;margin-right:24px;"><h3 style="margin-top:0">Rasa NLU</h3> <a class="github-button" href="https://github.com/RasaHQ/rasa_nlu" data-size="large" data-show-count="true" aria-label="Star RasaHQ/rasa_nlu on GitHub">Star</a></div>
      <div class="github-button" style="display:inline-block;"><h3 style="margin-top:0">Rasa Core</h3> <a class="github-button" href="https://github.com/RasaHQ/rasa_core" data-size="large" data-show-count="true" aria-label="Star RasaHQ/rasa_nlu on GitHub">Star</a></div>
      </div>
-  
+
 Why join the Forum?
 ^^^^^^^^^^^^^^^^^^^
 

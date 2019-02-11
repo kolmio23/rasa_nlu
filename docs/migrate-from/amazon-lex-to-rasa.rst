@@ -1,5 +1,5 @@
 
-:desc: Migrating from Amazon Lex to Rasa
+:desc: Open source alternative to Amazon Lex for conversational bots and NLP
 
 .. _amazon-lex-to-rasa:
 

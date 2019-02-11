@@ -1,5 +1,5 @@
 
-:desc: Migrating from Microsoft LUIS to Rasa
+:desc: Open source alternative to Microsoft LUIS for conversational bots and NLP
 
 .. _microsoft-luis-to-rasa:
 

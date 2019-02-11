@@ -1,3 +1,5 @@
+:desc: This tutorial will show you the different parts needed to build a bot using open source Rasa Core.
+
 .. _quickstart:
 
 Quickstart
